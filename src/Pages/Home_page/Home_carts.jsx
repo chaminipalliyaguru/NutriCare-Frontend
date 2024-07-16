@@ -1,7 +1,7 @@
 import React from 'react'
-import img_2 from "../assets/Home_img_2.jpg";
-import img_3 from "../assets/Home_img_3.jpg";
-import img_4 from "../assets/Home_img_4.jpg";
+import img_2 from "../../assets/Home_img_2.jpg"
+import img_3 from "../../assets/Home_img_3.jpg";
+import img_4 from "../../assets/Home_img_4.jpg";
 
 
 function Home_card() {
