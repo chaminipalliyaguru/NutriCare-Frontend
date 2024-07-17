@@ -9,7 +9,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Recipe_vault from './Pages/Recipe_vault';
-import Our_team from './Pages/Our_team';
+import About_us from './Pages/Our_story/About_us';
+// import Virtual_assistant from './Pages/Virtual_assistant'
+
 
 
 const router = createBrowserRouter([
@@ -18,13 +20,17 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "recipe_vault",
+    path: "Recipe_vault",
     element: <Recipe_vault/>,
   },
   {
-    path: "our_team",
-    element: <Recipe_vault/>,
+    path: "About_us",
+    element: <About_us/>,
   },
+  // {
+  //   path: "Virtual_assistant",
+  //   element: <Virtual_assistant/>,
+  // },
 ]);
 
 

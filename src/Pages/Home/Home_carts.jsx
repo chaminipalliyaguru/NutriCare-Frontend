@@ -4,14 +4,14 @@ import img_3 from "../../assets/Home_img_3.jpg";
 import img_4 from "../../assets/Home_img_4.jpg";
 
 
-function Home_card() {
+function Home_carts() {
   return (
     <div>
       <section id="Projects"
     class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-44 mt-10 mb-5 mr-36 mt-24">
 
     {/* <!--   ✅ Product card 1 - Starts Here 👇 --> */}
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl ml-64">
         <a href="#">
             <img src={img_2}
                     alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -51,7 +51,7 @@ function Home_card() {
 
 
     {/* <!--   ✅ Product card 2 - Starts Here 👇 --> */}
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl ml-24">
         <a href="#">
             <img src={img_3}
                     alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -82,7 +82,7 @@ function Home_card() {
 
     {/* <!--   ✅ Product card 3 - Starts Here 👇 --> */}
 
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl mr-8">
         <a href="#">
             <img src={img_4}
                     alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -115,4 +115,4 @@ function Home_card() {
   )
 }
 
-export default Home_card
+export default Home_carts

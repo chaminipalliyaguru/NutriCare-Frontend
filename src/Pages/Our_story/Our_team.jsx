@@ -1,15 +1,15 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import chamini from '../assets/our_team/Chamini Palliyaguru.jpg'
+import img_1 from '../../assets/our_team/Chamini Palliyaguru.jpg'
+import img_2 from '../../assets/our_team/Sadhika.jpg'
+import img_3 from '../../assets/our_team/Sajani.jpg'
+
 
 function Our_team() {
   return (
     <div>
       <Header/>
-
-
-      {/* <!-- source: https://github.com/mfg888/Responsive-Tailwind-CSS-Grid/blob/main/index.html --> */}
 
 <div class="text-center p-10">
     {/* <h1 class="font-bold text-4xl mb-4">Responsive Product card grid</h1> */}
@@ -25,7 +25,7 @@ function Our_team() {
     {/* <!--   ✅ Product card 1 - Starts Here 👇 --> */}
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
-            <img src={chamini}
+            <img src={img_1}
                     alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
                 {/* <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span> */}
@@ -49,7 +49,7 @@ function Our_team() {
     {/* <!--   ✅ Product card 2 - Starts Here 👇 --> */}
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
-            <img src={chamini}
+            <img src={img_3}
                     alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
             <p class="text-2xl text-center font-bold text-black truncate block capitalize mt-4">S. Sajani</p>
@@ -95,7 +95,7 @@ function Our_team() {
     {/* <!--   ✅ Product card 5 - Starts Here 👇 --> */}
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
-            <img src={chamini}
+            <img src={img_2}
                     alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
             <p class="text-2xl text-center font-bold text-black truncate block capitalize mt-4">M. S. S. Begam</p>

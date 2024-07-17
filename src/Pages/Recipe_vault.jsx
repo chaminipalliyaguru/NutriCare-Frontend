@@ -14,7 +14,7 @@ import img_4 from "../assets/Home_img_4.jpg";
 function Recipe_vault() {
   return (
     <div>
-      <Header/>
+     
 
       <div class='mt-24 font-serif flex text-center justify-between font-semibold text-stone-700 text-5xl subpixel-antialiased tracking-normal p-16 ml-96'>
         <p>
@@ -147,7 +147,7 @@ function Recipe_vault() {
         </div>
       </div>
 
-      <Footer/>
+     
     </div>
   )
 }

@@ -12,9 +12,11 @@
   "dependencies": {
     "@material-tailwind/html": "^2.2.2",
     "@material-tailwind/react": "^2.1.9",
+    "azure-openai": "^0.9.4",
     "bootstrap": "^5.3.3",
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.1",
+    "openai": "^4.52.7",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",

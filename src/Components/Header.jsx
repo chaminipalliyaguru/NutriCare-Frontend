@@ -2,21 +2,23 @@ import React from "react";
 import "./Header.css";
 import Logo from "../assets/Logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <div>
       <header className="header">
-        <img src={Logo} alt="logo" className="Logo"></img>
+      <Link to="/">
+          <img src={Logo} alt="logo" className="Logo" />
+        </Link>
         <nav className="navbar">
-          <a href="/"></a>
-          <a href="/recipe_vault">Recipe Vault</a>
-          <a href="/">Virtual Assistant</a>
-          <a href="/">Health Guide</a>
-          <a href="/">Find Your Doctor</a>
-          <a href="/">Our Story</a>
-          </nav>
+          {/* <a href="/"></a> */}
+          <Link to="/recipe_vault">Recipe Vault</Link>
+          <Link to="/">Virtual Assistant</Link>
+          <Link to="/">Health Guide</Link>
+          <Link to="/">Find Your Doctor</Link>
+          <Link to="/our_story">Our Story</Link>
+        </nav>
 
         {/* Resposive nav bar */}
 

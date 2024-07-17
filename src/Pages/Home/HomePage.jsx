@@ -3,9 +3,9 @@ import img_1 from "../../assets/Home_img_1.png";
 import img_5 from "../../assets/ChatGPT.png";
 import img_6 from "../../assets/Food Bar.png";
 import img_7 from "../../assets/surgery-img.png";
-import Home_card from "././Home_carts";
+import Home_carts from "./Home_carts";
 
-function Home_page() {
+function HomePage() {
   return (
     <div>
       
@@ -60,7 +60,7 @@ function Home_page() {
       </div>
 
       
-<Home_card/>
+<Home_carts/>
 
       {/* 3rd section of the page */}
       {/* 1 box */}
@@ -137,4 +137,4 @@ function Home_page() {
   );
 }
 
-export default Home_page;
+export default HomePage;
