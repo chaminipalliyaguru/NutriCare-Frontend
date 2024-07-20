@@ -86,6 +86,7 @@ function Recipe_vault() {
        {!loading && recipies.map((recipe) => {
         return <RecipeCard
           key={recipe._id}
+          id={recipe._id}
           title={recipe.title}
           description={recipe.description}
           prepTime={recipe.prepTime}
