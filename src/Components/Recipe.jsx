@@ -4,7 +4,7 @@ const RecipeCard = ({ title, description, prepTime, serves, imgSrc }) => {
     return (
         <div className="py-20 ml-36">
             <div className="rounded-xl overflow-hidden shadow-lg max-w-xs bg-amber-50">
-                <img src={imgSrc} alt="Meal image" className="object-cover w-full" />
+                <img src={imgSrc} alt="Meal image" className="object-cover w-full max-h-52" />
                 <div className="p-6">
                     <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         {title}

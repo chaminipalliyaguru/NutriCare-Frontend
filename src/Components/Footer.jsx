@@ -8,7 +8,7 @@ function Footer() {
     <div class="pt-32 pl-40">
       <footer class="w-11/12 p-5 bg-gray-800 bg-clip-border rounded-xl ">
         <div class="gap-y-6 gap-x-12 md:justify-between  flex flex-row flex-wrap items-center justify-center text-center">
-          <img src={Logo} alt="logo" className="Logo" />
+          <img src={Logo} alt="logo" className="Logo max-w-60" />
 
           <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
             <li>
