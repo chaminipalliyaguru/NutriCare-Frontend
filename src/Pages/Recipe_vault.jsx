@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import { Input, Button } from "@material-tailwind/react";
@@ -18,6 +18,7 @@ function Recipe_vault() {
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState(null)
   
+  const [condition, setName] = useState('') 
 
   async function getAll() {
     try {
@@ -31,9 +32,25 @@ function Recipe_vault() {
     }
   }
 
+  async function searchRecipe() {
+    try {
+      setLoading(true);
+      const resp = await axios.get('http://localhost:3000/recipe/search/'+condition);
+      if (resp.data) setRecipies(resp.data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   React.useEffect(() => {
     getAll()
   }, [])
+
+  useEffect(() => {
+    searchRecipe()
+  },[condition])
     
   return (
     <div>
@@ -48,7 +65,7 @@ function Recipe_vault() {
 
 
       <div className="ml-96 relative flex w-full max-w-[50rem] border-4 border-slate-400 rounded-xl">
-      <Input placeholder="Search"/>
+      <Input placeholder="Search" onChange={(e)=>setName(e.target.value)}/>
       {/* <Button
         size="md"
         // color={email ? "gray" : "blue-gray"}
@@ -77,7 +94,7 @@ function Recipe_vault() {
         />
        })}
 
-        {/* 2nd */}
+        {/* 2nd
 
         <div class="py-20 ml-1.5">
           <div class="rounded-xl overflow-hidden shadow-lg max-w-xs bg-amber-50">
@@ -107,38 +124,8 @@ function Recipe_vault() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* 3rd */}
-        <div class="py-20 mr-36">
-          <div class="rounded-xl overflow-hidden shadow-lg max-w-xs bg-amber-50">
-            <img src={img_4} alt="Meal image" class="object-cover w-full" />
-            <div class="p-6">
-              <h4 class="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                Lemon-Herb Salmon with Caponata & Farro
-              </h4>
-              <p class="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-                Mediterranean dinner with farm-fresh veggies, paired perfectly
-                with brown rice and red wine.
-              </p>
-
-              <div class="pt-2">
-                <p class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-                  20 min - easy prep - 2 serves
-                </p>
-
-                <div class="pl-32">
-                  <button
-                    class=" select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none bg-gray-900 text-xs py-3 px-6 rounded-lg  text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-                    type="button"
-                  >
-                    VIEW RECIPE
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
      
