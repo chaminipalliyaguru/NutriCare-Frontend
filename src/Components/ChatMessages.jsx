@@ -14,7 +14,9 @@ const ChatMessages = () => {
   }, [messages]);
 
   return (
-    <div className="flex flex-col overflow-y-auto" id="chatContainer">
+
+    <div className="flex flex-col overflow-y-auto mt-54" id="chatContainer">   
+
       {messages.length == 1 && (
         <div className="p-8 mx-auto text-lg text-slate-400">{role.message}</div>
       )}

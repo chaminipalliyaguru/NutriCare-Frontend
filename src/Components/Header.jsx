@@ -14,26 +14,11 @@ function Header() {
         <nav className="navbar">
           {/* <a href="/"></a> */}
           <Link to="/recipe_vault">Recipe Vault</Link>
-          <Link to="/">Virtual Assistant</Link>
-          <Link to="/">Health Guide</Link>
-          <Link to="/">Find Your Doctor</Link>
-          <Link to="/our_story">Our Story</Link>
+          <Link to="/assistant">Virtual Assistant</Link>
+          <Link to="/HealthGuide">Health Guide</Link>
+          <Link to="/findDoctor">Find Your Doctor</Link>
+          <Link to="/about_us">About Us</Link>
         </nav>
-
-        {/* Resposive nav bar */}
-
-          {/* <div className='toggle_btn'>
-          <GiHamburgerMenu size='1.5rem'/>
-          </div> }
-
-          { <div className="dropdown_menu">
-          <a href="/"></a>
-          <li><a href="/recipe_vault">Recipe Vault</a></li>
-          <li><a href="/">Virtual Assistant</a></li>
-          <li><a href="/">Health Guide</a></li>
-          <li><a href="/">Find Your Doctor</a></li>
-          <li><a href="/">Our Story</a></li>
-          </div> */}
       </header>
 
     </div>

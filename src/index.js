@@ -9,9 +9,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Recipe_vault from './Pages/Recipe_vault';
-import About_us from './Pages/Our_story/About_us';
-// import Virtual_assistant from './Pages/Virtual_assistant'
-
+import About_us from './Pages/Our_story/About_us'
+import HealthGuide from './Pages/HealthGuide';
 
 
 const router = createBrowserRouter([
@@ -20,17 +19,17 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "Recipe_vault",
+    path: "recipe_vault",
     element: <Recipe_vault/>,
   },
   {
-    path: "About_us",
+    path: "about_us",
     element: <About_us/>,
   },
-  // {
-  //   path: "Virtual_assistant",
-  //   element: <Virtual_assistant/>,
-  // },
+  {
+    path: "HealthGuide",
+    element: <HealthGuide/>,
+  },
 ]);
 
 

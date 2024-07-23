@@ -1,16 +1,13 @@
 import React from 'react'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
 import img_1 from '../../assets/our_team/Chamini Palliyaguru.jpg'
 import img_2 from '../../assets/our_team/Sadhika.jpg'
 import img_3 from '../../assets/our_team/Sajani.jpg'
+import img_4 from '../../assets/our_team/Sahan.jpg'
 
 
 function Our_team() {
   return (
     <div>
-      <Header/>
-
 <div class="text-center p-10">
     {/* <h1 class="font-bold text-4xl mb-4">Responsive Product card grid</h1> */}
     <h1 class="font-bold text-6xl mb-4 mt-16">Meet Our Team</h1>
@@ -25,7 +22,7 @@ function Our_team() {
     {/* <!--   ✅ Product card 1 - Starts Here 👇 --> */}
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
-            <img src={img_1}
+            <img src={img_4}
                     alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
                 {/* <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span> */}
@@ -63,7 +60,7 @@ function Our_team() {
 
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
-            <img src={chamini}
+            <img src={img_1}
                     alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
             <p class="text-2xl text-center font-bold text-black truncate block capitalize mt-4">Chamini Palliyaguru</p>
@@ -82,8 +79,8 @@ function Our_team() {
     {/* <!--   ✅ Product card 4 - Starts Here 👇 --> */}
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
-            <img src={chamini}
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            {/* <img src={img_1}
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" /> */}
             <div class="px-4 py-3 w-72">
             <p class="text-2xl text-center font-bold text-black truncate block capitalize mt-4">Abishek Haththakage</p>
             <p class="text-lg text-center text-black cursor-auto my-2">Devops Engineer</p>
@@ -107,7 +104,6 @@ function Our_team() {
 
 </section>
 
-      <Footer/>
     </div>
   )
 }

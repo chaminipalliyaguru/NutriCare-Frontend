@@ -1,6 +1,4 @@
 import React from 'react'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
 import { Input, Button } from "@material-tailwind/react";
 import img_2 from "../assets/Home_img_2.jpg";
 import img_3 from "../assets/Home_img_3.jpg";
