@@ -17,13 +17,13 @@ function Recipe_vault() {
   const [recipies, setRecipies] = React.useState([])
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState(null)
-  
-  const [condition, setName] = useState('') 
+
+  const [condition, setName] = useState('')
 
   async function getAll() {
     try {
       setLoading(true)
-      const response = await  axios.get('http://localhost:3000/recipe/get-all')
+      const response = await axios.get('http://localhost:3000/recipe/get-all')
       setRecipies(response.data)
     } catch (error) {
       setError(error)
@@ -35,7 +35,7 @@ function Recipe_vault() {
   async function searchRecipe() {
     try {
       setLoading(true);
-      const resp = await axios.get('http://localhost:3000/recipe/search/'+condition);
+      const resp = await axios.get('http://localhost:3000/recipe/search/' + condition);
       if (resp.data) setRecipies(resp.data);
     } catch (error) {
       console.error(error);
@@ -50,23 +50,23 @@ function Recipe_vault() {
 
   useEffect(() => {
     searchRecipe()
-  },[condition])
-    
+  }, [condition])
+
   return (
     <div>
-     
+
 
       <div class='mt-24 font-serif flex text-center justify-between font-semibold text-stone-700 text-5xl subpixel-antialiased tracking-normal p-16 ml-96'>
         <p>
-        DISCOVER DELICIOUS <br/>
-        AND HEALTHY RECIPES
+          DISCOVER DELICIOUS <br />
+          AND HEALTHY RECIPES
         </p>
       </div>
 
 
       <div className="ml-96 relative flex w-full max-w-[50rem] border-4 border-slate-400 rounded-xl">
-      <Input placeholder="Search" onChange={(e)=>setName(e.target.value)}/>
-      {/* <Button
+        <Input placeholder="Search" onChange={(e) => setName(e.target.value)} />
+        {/* <Button
         size="md"
         // color={email ? "gray" : "blue-gray"}
         // disabled={!email}
@@ -74,26 +74,27 @@ function Recipe_vault() {
       >
         Search
       </Button> */}
-    </div>
-      
+      </div>
+
 
       {/* 3rd section */}
 
-      <hr class="w-1/5 mx-auto" />
-      <div class="grid grid-cols-3 lg:gap-0 justify-items-center">
+      {/* <hr class="w-1/5 mx-auto" /> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center">
+      {/* <div class="grid grid-cols-3 lg:gap-0 justify-items-center"> */}
 
         {/* 1st of 2nd section */}
-       {!loading && recipies.map((recipe) => {
-        return <RecipeCard
-          key={recipe._id}
-          id={recipe._id}
-          title={recipe.title}
-          description={recipe.description}
-          prepTime={recipe.prepTime}
-          serves={recipe.serve}
-          imgSrc={recipe.imgSrc}
-        />
-       })}
+        {!loading && recipies.map((recipe) => {
+          return <RecipeCard
+            key={recipe._id}
+            id={recipe._id}
+            title={recipe.title}
+            description={recipe.description}
+            prepTime={recipe.prepTime}
+            serves={recipe.serve}
+            imgSrc={recipe.imgSrc}
+          />
+        })}
 
         {/* 2nd
 
@@ -129,7 +130,7 @@ function Recipe_vault() {
 
       </div>
 
-     
+
     </div>
   )
 }
