@@ -30,7 +30,7 @@ export default function Header() {
         <Link to="/assistant" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Virtual Assistant</Link>
         <Link to="/HealthGuide" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Health Guide</Link>
         <Link to="/findDoctor" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Find Your Doctor</Link>
-        <Link to="/our_story" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Our Story</Link>
+        <Link to="/about_us" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Our Story</Link>
       </nav>
     </header>
   );

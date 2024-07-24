@@ -1,13 +1,13 @@
 import React from "react";
 import Our_team from "./Our_team";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 function About_us() {
   return (
     <div>
       <div>
-        <h1 className='font-bold  mt-2 ml-60 text-5xl mt-28 ml-48'>ABOUT US</h1>
+        <h1 className='font-bold text-6xl mt-16 ml-48'>ABOUT US</h1>
         <div className=" pl-80 max-w-3xl mx-auto ml-80 mt-0 ">
 
           <p className=" text-gray-700 mb-6">

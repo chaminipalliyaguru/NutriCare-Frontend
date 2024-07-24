@@ -56,7 +56,7 @@ function Recipe_vault() {
     <div>
 
 
-      <div class='mt-24 font-serif flex text-center justify-between font-semibold text-stone-700 text-5xl subpixel-antialiased tracking-normal p-16 ml-96'>
+      <div className='mt-24 font-serif flex text-center justify-between font-semibold text-stone-700 text-5xl subpixel-antialiased tracking-normal p-16 ml-96'>
         <p>
           DISCOVER DELICIOUS <br />
           AND HEALTHY RECIPES

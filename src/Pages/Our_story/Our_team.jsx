@@ -4,7 +4,6 @@ import img_2 from '../../assets/our_team/Sadhika.jpg'
 import img_3 from '../../assets/our_team/Sajani.jpg'
 import img_4 from '../../assets/our_team/Sahan.jpg'
 
-
 function Our_team() {
   return (
     <div>
@@ -23,7 +22,7 @@ function Our_team() {
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
             <img src={img_4}
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                    alt="Product" className="h-80 w-72 object-cover rounded-t-xl" />
             <div className="px-4 py-3 w-72">
                 {/* <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span> */}
                 <p className="text-2xl text-center font-bold text-black truncate block capitalize mt-4">Sahan Madushka</p>
@@ -80,7 +79,7 @@ function Our_team() {
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
             {/* <img src={img_1}
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" /> */}
+                    alt="Product" className="h-80 w-72 object-cover rounded-t-xl" /> */}
             <div className="px-4 py-3 w-72">
             <p className="text-2xl text-center font-bold text-black truncate block capitalize mt-4">Abishek Haththakage</p>
             <p className="text-lg text-center text-black cursor-auto my-2">Devops Engineer</p>
