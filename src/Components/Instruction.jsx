@@ -26,7 +26,7 @@ const Instruction = () => {
   };
 
   return (
-    <div className="w-full mt-24 bg-gray-100 border-r border-gray-300 md:w-1/4">
+    <div className="w-full mt-24 bg-gray-100 border-r border-gray-300 md:w-1/4 ml-48">
       <div className="p-4">
         <h1 className="mb-4 text-lg font-semibold border-b border-gray-300">
           Roles
@@ -38,7 +38,7 @@ const Instruction = () => {
               key={role.id}
               className="flex items-center justify-between mb-4"
             >
-              <h2 className="mb-2 font-semibold text-md">{role.name}</h2>
+              <h2 className="mb-2 font-semibold text-md mt-2">{role.name}</h2>
               <button
                 className="text-blue-500 underline rounded-md "
                 onClick={roleHandler.bind(null, role)}
@@ -48,7 +48,7 @@ const Instruction = () => {
             </li>
           ))}
         </ul>
-        <button onClick={clearChatHanlder} className="text-red-500">
+        <button onClick={clearChatHanlder} className="text-red-500 mt-16">
           Clear Chat
         </button>
       </div>

@@ -6,6 +6,24 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+<<<<<<< HEAD
+    <div>
+      <header className="header">
+      <Link to="/">
+          <img src={Logo} alt="logo" className="Logo" />
+        </Link>
+        <nav className="navbar">
+          {/* <a href="/"></a> */}
+          <Link to="/recipe_vault">Recipe Vault</Link>
+          <Link to="/assistant">Virtual Assistant</Link>
+          <Link to="/HealthGuide">Health Guide</Link>
+          <Link to="/findDoctor">Find Your Doctor</Link>
+          <Link to="/about_us">About Us</Link>
+        </nav>
+      </header>
+
+    </div>
+=======
     <header className="bg-white sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
@@ -33,5 +51,6 @@ export default function Header() {
         <Link to="/our_story" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Our Story</Link>
       </nav>
     </header>
+>>>>>>> 1241460091b779d0f28c6c458c30d46d527d7b2c
   );
 }

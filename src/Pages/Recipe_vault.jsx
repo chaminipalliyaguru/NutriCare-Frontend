@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+import React from 'react'
+=======
 import React, { useEffect, useState } from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+>>>>>>> 1241460091b779d0f28c6c458c30d46d527d7b2c
 import { Input, Button } from "@material-tailwind/react";
 import img_2 from "../assets/Home_img_2.jpg";
 import img_3 from "../assets/Home_img_3.jpg";
