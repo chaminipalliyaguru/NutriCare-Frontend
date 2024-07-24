@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-import React from 'react'
-=======
 import React, { useEffect, useState } from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
->>>>>>> 1241460091b779d0f28c6c458c30d46d527d7b2c
 import { Input, Button } from "@material-tailwind/react";
-import img_2 from "../assets/Home_img_2.jpg";
-import img_3 from "../assets/Home_img_3.jpg";
-import img_4 from "../assets/Home_img_4.jpg";
+// import img_2 from "../assets/Home_img_2.jpg";
+// import img_3 from "../assets/Home_img_3.jpg";
+// import img_4 from "../assets/Home_img_4.jpg";
 
 // export function InputWithButton() {
 //   const [email, setEmail] = React.useState("");
@@ -100,37 +96,7 @@ function Recipe_vault() {
           />
         })}
 
-        {/* 2nd
 
-        <div class="py-20 ml-1.5">
-          <div class="rounded-xl overflow-hidden shadow-lg max-w-xs bg-amber-50">
-            <img src={img_3} alt="Meal image" class="object-cover w-full" />
-            <div class="p-6">
-              <h4 class="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                Seared Tuna with Bulgur & Chickpea Salad
-              </h4>
-              <p class="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-                This tuna recipe mixes fresh fish with olive oil, lemon, herbs,
-                and chickpeas.
-              </p>
-
-              <div class="pt-2">
-                <p class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-                  20 min - easy prep - 2 serves
-                </p>
-
-                <div class="pl-32">
-                  <button
-                    class=" select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none bg-gray-900 text-xs py-3 px-6 rounded-lg  text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-                    type="button"
-                  >
-                    VIEW RECIPE
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
       </div>
 
