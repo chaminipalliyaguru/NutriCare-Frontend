@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/Logo1.png";
+import { Link } from "react-router-dom";
 import { FaFacebookSquare, FaInstagram, FaYoutube} from "react-icons/fa";
 
 
@@ -8,49 +9,45 @@ function Footer() {
     <div class="pt-32 pl-40">
       <footer class="w-11/12 p-5 bg-gray-800 bg-clip-border rounded-xl ">
         <div class="gap-y-6 gap-x-12 md:justify-between  flex flex-row flex-wrap items-center justify-center text-center">
+        <Link to="/">
           <img src={Logo} alt="logo" className="Logo max-w-60" />
-
+        </Link>
           <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
             <li>
-              <a
-                href="#"
+              <Link to="/recipe_vault"
                 class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-white hover:text-yellow-600 focus:text-yellow-500 text-xs"
               >
                 RECIPE VAULT
                 
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link to="/assistant"
                 class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-white hover:text-yellow-600 focus:text-yellow-500 text-xs"
               >
                 VIRTUAL ASSISTANT
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link to="/HealthGuide"
                 class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-white hover:text-yellow-600 focus:text-yellow-500 text-xs"
               >
                 HEALTH GUIDE
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link to="/findDoctor"
                 class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-white hover:text-yellow-600 focus:text-yellow-500 text-xs"
               >
                 FIND YOUR DOCTOR
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+               <Link to="/about_us"
                 class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-white hover:text-yellow-600 focus:text-yellow-500 text-xs"
               >
                 OUR STORY
-              </a>
+              </Link>
             </li>
             <li>
               <a
