@@ -1,7 +1,5 @@
-import React from "react";
-import Our_team from "./Our_team";
 import { Link } from "react-router-dom";
-// import axios from "axios";
+
 
 function About_us() {
   return (
@@ -11,7 +9,7 @@ function About_us() {
         <div className=" pl-80 max-w-3xl mx-auto ml-80 mt-0 ">
 
           <p className=" text-gray-700 mb-6">
-            Welcome to NutriCure! We're dedicated to enhancing your health with personalized recipes and valuable resources. Our mission is to empower you with nutritious meals tailored to your specific health needs. Whether you're managing diabetes, hypertension, or other conditions, NutriCure is here to support you.
+            Welcome to NutriCure! We are dedicated to enhancing your health with personalized recipes and valuable resources. Our mission is to empower you with nutritious meals tailored to your specific health needs. Whether you are managing diabetes, hypertension, or other conditions, NutriCure is here to support you.
           </p>
           <h2 className="text-2xl font-semibold mb-3">Why Choose NutriCure?</h2>
 
