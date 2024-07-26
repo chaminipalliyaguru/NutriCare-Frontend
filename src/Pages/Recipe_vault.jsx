@@ -62,8 +62,12 @@ function Recipe_vault() {
         </p>
       </div>
       
-      <div className="relative flex w-full max-w-[50rem] border-1 border-slate-400 rounded-xl mx-auto p-4">
-        <Input placeholder="Search" onChange={(e) => setName(e.target.value)} />
+      <div className="relative flex w-full max-w-[50rem] border border-slate-400 rounded-xl mx-auto ">
+        <Input 
+          placeholder="Search for recipes..." 
+          onChange={(e) => setName(e.target.value)} 
+          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
