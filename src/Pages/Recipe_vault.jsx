@@ -43,37 +43,24 @@ function Recipe_vault() {
   }, [condition])
 
   return (
-    <div>
+    <div >
 
-
-      <div className='mt-24 font-serif flex text-center justify-between font-semibold text-stone-700 text-5xl subpixel-antialiased tracking-normal p-16 ml-96'>
+      <div className='mt-24 font-serif flex flex-col items-center text-center font-semibold text-stone-700 text-3xl sm:text-4xl md:text-5xl subpixel-antialiased tracking-normal p-4 sm:p-8 md:p-16'>
         <p>
           DISCOVER DELICIOUS <br />
           AND HEALTHY RECIPES
         </p>
       </div>
-
-
-      <div className="ml-96 relative flex w-full max-w-[50rem] border-4 border-slate-400 rounded-xl">
-        <Input placeholder="Search" onChange={(e) => setName(e.target.value)} />
-        {/* <Button
-        size="md"
-        // color={email ? "gray" : "blue-gray"}
-        // disabled={!email}
-        className="!absolute right-1 top-1 rounded"
-      >
-        Search
-      </Button> */}
+      
+      <div className="relative flex w-full max-w-[50rem] border border-slate-400 rounded-xl mx-auto ">
+        <Input 
+          placeholder="Search for recipes..." 
+          onChange={(e) => setName(e.target.value)} 
+          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
       </div>
-
-
-      {/* 3rd section */}
-
-      {/* <hr class="w-1/5 mx-auto" /> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center">
-      {/* <div class="grid grid-cols-3 lg:gap-0 justify-items-center"> */}
-
-        {/* 1st of 2nd section */}
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
         {!loading && recipies.map((recipe) => {
           return <RecipeCard
             key={recipe._id}
@@ -85,12 +72,8 @@ function Recipe_vault() {
             imgSrc={recipe.imgSrc}
           />
         })}
-
-
-
+      
       </div>
-
-
     </div>
   )
 }
