@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ChatScreen from "../Components/ChatScreen";
 import { AppContext } from "../contexts/AppContext";
 import { ChatContext } from "../contexts/chatContext";

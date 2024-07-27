@@ -1,6 +1,3 @@
-
-import React from 'react'
-import { Link } from "react-router-dom";
 import img_1 from '../assets/our_team/Chamini Palliyaguru.jpg';
 
 

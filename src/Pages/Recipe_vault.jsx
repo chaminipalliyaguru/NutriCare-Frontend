@@ -1,15 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
 import { Input, Button } from "@material-tailwind/react";
-// import img_2 from "../assets/Home_img_2.jpg";
-// import img_3 from "../assets/Home_img_3.jpg";
-// import img_4 from "../assets/Home_img_4.jpg";
-
-// export function InputWithButton() {
-//   const [email, setEmail] = React.useState("");
-//   const onChange = ({ target }) => setEmail(target.value);
-
 import axios from 'axios'
 import RecipeCard from '../Components/Recipe';
 
