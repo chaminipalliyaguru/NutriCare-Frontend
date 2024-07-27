@@ -20,7 +20,7 @@ const MessageBox = () => {
 
     const sendToServer = async (message) => {
       setIsThinking(true);
-      const response = await fetch("http://localhost:3000/api/ask-bot", {
+      const response = await fetch("http://localhost:3000/ask-bot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
