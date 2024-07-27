@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 
+
 const RecipeCard = ({ id, title, description, prepTime, serves, imgSrc }) => {
+    console.log("id", id);
     return (
         <div className="p-4 sm:p-6 md:p-8 lg:p-10">
             <div className="rounded-xl overflow-hidden shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-amber-50">
@@ -19,7 +21,7 @@ const RecipeCard = ({ id, title, description, prepTime, serves, imgSrc }) => {
                         </p>
 
                         <div className="mt-4">
-                            <Link to={'/recipe/'+id}>
+                            <Link to={`../Components/Recipes/RecipeView/${id}`}>
                                 <button
                                     className="w-full sm:w-auto select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none bg-gray-900 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-3 px-6 rounded-lg text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
                                     type="button"
