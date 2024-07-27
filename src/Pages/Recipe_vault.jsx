@@ -94,5 +94,4 @@ function Recipe_vault() {
     </div>
   )
 }
-
 export default Recipe_vault

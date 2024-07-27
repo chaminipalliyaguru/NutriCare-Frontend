@@ -6,7 +6,7 @@ import { FaFacebookSquare, FaInstagram, FaYoutube} from "react-icons/fa";
 
 function Footer() {
   return (
-    <div class="pt-32 pl-40">
+    <div class="p-8 pt-32 pl-40">
       <footer class="w-11/12 p-5 bg-gray-800 bg-clip-border rounded-xl ">
         <div class="gap-y-6 gap-x-12 md:justify-between  flex flex-row flex-wrap items-center justify-center text-center">
         <Link to="/">
