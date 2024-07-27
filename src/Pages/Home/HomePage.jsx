@@ -2,12 +2,37 @@ import img_1 from "../../assets/Home_img_1.png";
 import img_5 from "../../assets/ChatGPT.png";
 import img_6 from "../../assets/Food Bar.png";
 import img_7 from "../../assets/surgery-img.png";
-import Home_carts from "./Home_carts";
+import React, { useEffect, useState } from 'react'
+import { Input, Button } from "@material-tailwind/react";
+import axios from 'axios'
+import RecipeCard from '../../Components/Recipe';
 
 function HomePage() {
+  const [recipies, setRecipies] = React.useState([])
+  const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState(null)
+
+  const [condition, setName] = useState('')
+
+  async function getAll() {
+    try {
+      setLoading(true)
+      const response = await axios.get('http://localhost:3000/recipe/get-all?limit=3')
+      setRecipies(response.data)
+    } catch (error) {
+      setError(error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  React.useEffect(() => {
+    getAll()
+  }, [])
+
   return (
     <div>
-      
+
       {/* 1st section: welcome part */}
       <div className="flex items-center justify-between h-50 pt-32 pl-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full max-w-[74rem] flex-row ">
@@ -58,8 +83,23 @@ function HomePage() {
         </div>
       </div>
 
+      {/* 2nd section of the page */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 place-items-center mt-8">
+        {!loading && recipies.map((recipe) => {
+          return <RecipeCard
+            key={recipe._id}
+            id={recipe._id}
+            title={recipe.title}
+            description={recipe.description}
+            prepTime={recipe.prepTime}
+            serves={recipe.serve}
+            imgSrc={recipe.imgSrc}
+          />
+        })}
       
-<Home_carts/>
+      </div>
+
+      {/* <Home_carts /> */}
 
       {/* 3rd section of the page */}
       {/* 1 box */}
@@ -131,7 +171,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      
+
     </div>
   );
 }
