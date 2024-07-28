@@ -5,7 +5,7 @@ import img_7 from "../../assets/surgery-img.png";
 import React, { useEffect, useState } from 'react'
 import { Input, Button } from "@material-tailwind/react";
 import axios from 'axios'
-import RecipeCard from '../../Components/Recipe';
+import RecipeCard from "../../Components/Recipes/RecipeCard";
 
 function HomePage() {
   const [recipies, setRecipies] = React.useState([])
@@ -84,7 +84,7 @@ function HomePage() {
       </div>
 
       {/* 2nd section of the page */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 place-items-center mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
         {!loading && recipies.map((recipe) => {
           return <RecipeCard
             key={recipe._id}
@@ -94,12 +94,12 @@ function HomePage() {
             prepTime={recipe.prepTime}
             serves={recipe.serve}
             imgSrc={recipe.imgSrc}
+            condition={recipe.condition}
           />
         })}
-      
+
       </div>
 
-      {/* <Home_carts /> */}
 
       {/* 3rd section of the page */}
       {/* 1 box */}

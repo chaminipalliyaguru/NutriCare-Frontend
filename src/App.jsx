@@ -10,6 +10,8 @@ import Our_team from "./Pages/Our_story/Our_team";
 import FindDoctor from "./Pages/FindDoctor";
 import RecipeAdmin from "./Pages/admin/recipe/rc_index";
 import RecipeView from "./Components/Recipes/RecipeView";
+import RecipeCard from "./Components/Recipes/RecipeCard"
+import DoctorCard from "./Components/doctors/doctorCard"; 
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         {/* <Route path="/recipeView" element={<RecipeView />} /> */}
         <Route path="/admin/recipe" element={<RecipeAdmin />} />
         <Route path="/Components/Recipes/RecipeView/:id" element={<RecipeView />} />
+        <Route path="/Components/Recipes/RecipeCard" element={<RecipeCard />} />
+        <Route path="/Components/doctors/doctorCard" element={<DoctorCard />} />
       </Routes>
       <Footer />
     </>
