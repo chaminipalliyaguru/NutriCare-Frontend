@@ -15,6 +15,7 @@ import RecipeView from "./Components/Recipes/RecipeView";
 import RecipeCard from "./Components/Recipes/RecipeCard"
 import DoctorCard from "./Components/doctors/doctorCard"; 
 import ArticleView from "./Components/articles/articleView";
+import LoginPage from "./Pages/admin/login";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/admin/recipe" element={<RecipeAdmin />} />
         <Route path="/admin/doctor" element={<DoctorAdmin />} />
         <Route path="/admin/article" element={<ArticleAdmin />} />
+        <Route path="/admin/login" element={<LoginPage/>} />
         <Route path="/Components/Recipes/RecipeView/:id" element={<RecipeView />} />
         <Route path="/Components/Recipes/RecipeCard" element={<RecipeCard />} />
         <Route path="/Components/doctors/doctorCard" element={<DoctorCard />} />
