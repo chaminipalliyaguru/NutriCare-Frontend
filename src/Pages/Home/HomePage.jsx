@@ -17,7 +17,7 @@ function HomePage() {
   async function getAll() {
     try {
       setLoading(true)
-      const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net//recipe/get-all?limit=3')
+      const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/get-all?limit=3')
       setRecipies(response.data)
     } catch (error) {
       setError(error)
@@ -32,10 +32,6 @@ function HomePage() {
 
   return (
     <div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 934f26d250a99a2d12a9cba85e2cd3e2351b706b
       {/* 1st section: welcome part */}
       <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-16 lg:pt-32 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
@@ -85,9 +81,6 @@ function HomePage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      <Home_carts />
-=======
       {/* 2nd section of the page */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
         {!loading && recipies.map((recipe) => {
@@ -105,7 +98,6 @@ function HomePage() {
 
       </div>
 
->>>>>>> 934f26d250a99a2d12a9cba85e2cd3e2351b706b
 
       {/* 3rd section of the page */}
       <hr className="w-1/5 mx-auto my-8" />
@@ -158,10 +150,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 934f26d250a99a2d12a9cba85e2cd3e2351b706b
     </div>
   );
 }

@@ -20,7 +20,7 @@ const MessageBox = () => {
 
     const sendToServer = async (message) => {
       setIsThinking(true);
-      const response = await fetch("http://localhost:3000/ask-bot", {
+      const response = await fetch("https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/ask-bot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
