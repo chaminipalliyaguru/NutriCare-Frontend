@@ -144,7 +144,7 @@ function HomePage() {
               <p className="block mt-3 font-sans text-xl font-normal leading-relaxed text-gray-700">
                 Easily access a network of healthcare professionals, enabling
                 seamless communication and support for your health concerns and
-                queries.
+                queries dietary needs and preferences perfectly.
               </p>
             </div>
           </div>
