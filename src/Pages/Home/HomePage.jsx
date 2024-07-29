@@ -32,7 +32,6 @@ function HomePage() {
 
   return (
     <div>
-
       {/* 1st section: welcome part */}
       <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-16 lg:pt-32 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
@@ -82,10 +81,8 @@ function HomePage() {
         </div>
       </div>
 
-
       {/* 2nd section of the page */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
-        <div className="">
         {!loading && recipies.map((recipe) => {
           return <RecipeCard
             key={recipe._id}
@@ -98,16 +95,14 @@ function HomePage() {
             condition={recipe.condition}
           />
         })}
-        </div>
-      </div>
 
-      
+      </div>
 
 
       {/* 3rd section of the page */}
-      <hr className="w-1/5 mx-auto my-8" />
+      <hr className="w-1/5 mx-auto my-10 mt-96" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center bg-amber-50 px-4 lg:px-0">
-        <div className="py-10">
+        <div className="py-8">
           <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
             <img src={img_5} alt="Meal image" className="object-cover w-auto h-40  ml-24" />
             <div className="p-6">
@@ -155,8 +150,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 }

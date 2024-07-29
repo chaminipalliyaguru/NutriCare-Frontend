@@ -52,7 +52,7 @@ function Recipe_vault() {
         </p>
       </div>
       
-      <div className="relative flex w-full max-w-[50rem] border border-slate-400 rounded-xl mx-auto ">
+      <div className="relative flex w-full max-w-[50rem] border border-slate-400 rounded-xl mx-auto">
         <Input 
           placeholder="Search for recipes..." 
           onChange={(e) => setName(e.target.value)} 
@@ -60,7 +60,7 @@ function Recipe_vault() {
         />
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8 mb-80">
         {!loading && recipies.map((recipe) => {
           return <RecipeCard
             key={recipe._id}
