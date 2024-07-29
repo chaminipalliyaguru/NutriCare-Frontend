@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 
 const Admin = () => {
@@ -10,6 +10,21 @@ const Admin = () => {
             navigate('/auth/login');
         }
     }, [navigate]);
+
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
+    useEffect(() => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        setIsLoggedIn(true);
+      }
+    }, []);
+  
+    const handleLogout = () => {
+      localStorage.removeItem('token');
+      setIsLoggedIn(false);
+      navigate('/auth/login');
+    };
 
     return (
         <div className="min-h-screen bg-gray-100">
@@ -54,6 +69,14 @@ const Admin = () => {
                             >
                                 Articles
                             </NavLink>
+                        </li>
+                        <li>
+                            <button 
+                                onClick={handleLogout}
+                                className="block py-2 px-4 rounded bg-red-500 text-white w-full"
+                            >
+                                Logout
+                            </button>
                         </li>
                     </ul>
                 </nav>
