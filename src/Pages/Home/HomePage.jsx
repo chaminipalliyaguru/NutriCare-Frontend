@@ -33,7 +33,7 @@ function HomePage() {
   return (
     <div>
       {/* 1st section: welcome part */}
-      <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-16 lg:pt-32 px-4 lg:px-40">
+      <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-10 lg:pt-32 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
           <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0">
             <img
@@ -144,7 +144,7 @@ function HomePage() {
               <p className="block mt-3 font-sans text-xl font-normal leading-relaxed text-gray-700">
                 Easily access a network of healthcare professionals, enabling
                 seamless communication and support for your health concerns and
-                queries dietary needs and preferences perfectly.
+                queries 
               </p>
             </div>
           </div>
