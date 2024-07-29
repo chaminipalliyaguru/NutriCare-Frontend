@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const validateForm = () => {
     if (!email || !password) {
@@ -33,7 +36,7 @@ const LoginPage = () => {
       const response = await axios.post('http://localhost:3000/user/users/login', { email, password });
       if(response.data.token) {
         localStorage.setItem('token', response.data.token);
-        navigate('/');
+        navigate('/admin/recipe');
       }
     } catch (err) {
         if(err.response.status === 400) {

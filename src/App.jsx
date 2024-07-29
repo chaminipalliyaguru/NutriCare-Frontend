@@ -13,10 +13,11 @@ import DoctorAdmin from "./Pages/admin/doctor/do_index";
 import ArticleAdmin from "./Pages/admin/article/ac_index";
 import RecipeView from "./Components/Recipes/RecipeView";
 import RecipeCard from "./Components/Recipes/RecipeCard"
-import DoctorCard from "./Components/doctors/doctorCard"; 
+import DoctorCard from "./Components/doctors/doctorCard";
 import ArticleView from "./Components/articles/articleView";
 import LoginPage from "./Pages/auth/login";
 import Register from "./Pages/auth/register";
+import Admin from "./Pages/admin";
 
 function App() {
   return (
@@ -31,11 +32,13 @@ function App() {
         <Route path="/HealthGuide" element={<HealthGuide />} />
         <Route path="/findDoctor" element={<FindDoctor />} />
         {/* <Route path="/recipeView" element={<RecipeView />} /> */}
-        <Route path="/admin/recipe" element={<RecipeAdmin />} />
-        <Route path="/admin/doctor" element={<DoctorAdmin />} />
-        <Route path="/admin/article" element={<ArticleAdmin />} />
-        <Route path="/auth/login" element={<LoginPage/>} />
-        <Route path="/auth/register" element={<Register/>} />
+        <Route path="/admin" element={<Admin />}>
+          <Route path="recipe" element={<RecipeAdmin />} />
+          <Route path="doctor" element={<DoctorAdmin />} />
+          <Route path="article" element={<ArticleAdmin />} />
+        </Route>
+        <Route path="/auth/login" element={<LoginPage />} />
+        <Route path="/auth/register" element={<Register />} />
         <Route path="/Components/Recipes/RecipeView/:id" element={<RecipeView />} />
         <Route path="/Components/Recipes/RecipeCard" element={<RecipeCard />} />
         <Route path="/Components/doctors/doctorCard" element={<DoctorCard />} />
