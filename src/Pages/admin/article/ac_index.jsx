@@ -94,7 +94,7 @@ export default function ArticleAdmin() {
                 <div className="my-3 bg-white border-1 shadow-md rounded-md p-4">
                     <input type="text" onChange={e => setTitle(e.target.value)} value={title} placeholder="Search by Title" className="border-1 border-gray-300 rounded-md p-2" />
                 </div>
-                {!loading && <ArticleTable articleList={articles} selectArtile={setSelectedArticle} deleteArticle={deleteArticle} />}
+                {!loading && <ArticleTable articleList={articles} selectArticle={setSelectedArticle} deleteArticle={deleteArticle} />}
             </div>
         </>
     )

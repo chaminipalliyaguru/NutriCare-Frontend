@@ -35,13 +35,19 @@ export default function ArticleTable({ articleList, selectArticle, deleteArticle
                                             </div>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap">
-                                            <div className="text-sm text-gray-900">{article.title}</div>
+                                            <div className="text-sm text-gray-900">
+                                                {article.title ? article.title.slice(0, 50) : ''}
+                                            </div>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap">
-                                            <div className="text-sm text-gray-900">{article.description}</div>
+                                            <div className="text-sm text-gray-900">
+                                                {article.description ? article.description.slice(0, 50) : ''}
+                                            </div>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap">
-                                            <div className="text-sm text-gray-900">{article.content}</div>
+                                            <div className="text-sm text-gray-900">
+                                                {article.content ? article.content.slice(0, 50) : ''}
+                                            </div>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <button onClick={() => selectArticle(article)} className="text-indigo-600 hover:text-indigo-900">Edit</button>
