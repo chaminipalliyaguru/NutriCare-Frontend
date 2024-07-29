@@ -10,9 +10,11 @@ import Our_team from "./Pages/Our_story/Our_team";
 import FindDoctor from "./Pages/FindDoctor";
 import RecipeAdmin from "./Pages/admin/recipe/rc_index";
 import DoctorAdmin from "./Pages/admin/doctor/do_index";
+import ArticleAdmin from "./Pages/admin/article/ac_index";
 import RecipeView from "./Components/Recipes/RecipeView";
 import RecipeCard from "./Components/Recipes/RecipeCard"
 import DoctorCard from "./Components/doctors/doctorCard"; 
+import ArticleView from "./Components/articles/articleView";
 
 function App() {
   return (
@@ -29,9 +31,11 @@ function App() {
         {/* <Route path="/recipeView" element={<RecipeView />} /> */}
         <Route path="/admin/recipe" element={<RecipeAdmin />} />
         <Route path="/admin/doctor" element={<DoctorAdmin />} />
+        <Route path="/admin/article" element={<ArticleAdmin />} />
         <Route path="/Components/Recipes/RecipeView/:id" element={<RecipeView />} />
         <Route path="/Components/Recipes/RecipeCard" element={<RecipeCard />} />
         <Route path="/Components/doctors/doctorCard" element={<DoctorCard />} />
+        <Route path="/Components/articles/articleView/:id" element={<ArticleView />} />
       </Routes>
       <Footer />
     </>
