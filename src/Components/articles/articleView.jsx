@@ -40,7 +40,7 @@ export default function ArticleView() {
                     {article.title}
                 </h1>
                 <div className='mr-44'>
-                    <img src={article.imageUrl} alt={article.title} className='ml-20 w-full' />
+                    <img src={article.imgSrc} alt={article.title} className='ml-20 w-full' />
                 </div>
             </div>
             <div className='ml-20 text-xs mr-20 text-gray-900'>
