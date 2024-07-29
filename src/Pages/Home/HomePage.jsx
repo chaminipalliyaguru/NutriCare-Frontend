@@ -2,11 +2,40 @@ import img_1 from "../../assets/Home_img_1.png";
 import img_5 from "../../assets/ChatGPT.png";
 import img_6 from "../../assets/Food Bar.png";
 import img_7 from "../../assets/surgery-img.png";
-import Home_carts from "./Home_carts";
+import React, { useEffect, useState } from 'react'
+import { Input, Button } from "@material-tailwind/react";
+import axios from 'axios'
+import RecipeCard from "../../Components/Recipes/RecipeCard";
 
 function HomePage() {
+  const [recipies, setRecipies] = React.useState([])
+  const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState(null)
+
+  const [condition, setName] = useState('')
+
+  async function getAll() {
+    try {
+      setLoading(true)
+      const response = await axios.get('http://localhost:3000/recipe/get-all?limit=3')
+      setRecipies(response.data)
+    } catch (error) {
+      setError(error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  React.useEffect(() => {
+    getAll()
+  }, [])
+
   return (
     <div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 934f26d250a99a2d12a9cba85e2cd3e2351b706b
       {/* 1st section: welcome part */}
       <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-16 lg:pt-32 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
@@ -56,7 +85,27 @@ function HomePage() {
         </div>
       </div>
 
+<<<<<<< HEAD
       <Home_carts />
+=======
+      {/* 2nd section of the page */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
+        {!loading && recipies.map((recipe) => {
+          return <RecipeCard
+            key={recipe._id}
+            id={recipe._id}
+            title={recipe.title}
+            description={recipe.description}
+            prepTime={recipe.prepTime}
+            serves={recipe.serve}
+            imgSrc={recipe.imgSrc}
+            condition={recipe.condition}
+          />
+        })}
+
+      </div>
+
+>>>>>>> 934f26d250a99a2d12a9cba85e2cd3e2351b706b
 
       {/* 3rd section of the page */}
       <hr className="w-1/5 mx-auto my-8" />
@@ -109,6 +158,10 @@ function HomePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 934f26d250a99a2d12a9cba85e2cd3e2351b706b
     </div>
   );
 }

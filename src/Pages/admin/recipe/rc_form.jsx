@@ -11,6 +11,7 @@ export default function RecipeForm({ recipe, closeForm }) {
         serves: '',
         imgSrc: '',
         condition: '',
+        recipeContent: '',
     });
     const [errors, setErrors] = useState({});
 
@@ -36,6 +37,7 @@ export default function RecipeForm({ recipe, closeForm }) {
         if (!formRecipe.serves || formRecipe.serves <= 0) newErrors.serves = 'Serves must be a positive number';
         if (!formRecipe.imgSrc) newErrors.imgSrc = 'Image URL is required';
         if (!formRecipe.condition) newErrors.condition = 'Condition is required';
+        if (!formRecipe.recipeContent) newErrors.recipeContent = 'Recipe content is required';
         return newErrors;
     };
 
@@ -142,6 +144,17 @@ export default function RecipeForm({ recipe, closeForm }) {
                     className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
                 />
                 {errors.condition && <p className="text-red-500">{errors.condition}</p>}
+            </div>
+            <div className="mb-6">
+                <label className="block text-gray-700 font-semibold mb-2">Recipe Content:</label>
+                <input
+                    type="text"
+                    name="recipeContent"
+                    value={formRecipe.recipeContent}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+                />
+                {errors.recipeContent && <p className="text-red-500">{errors.recipeContent}</p>}
             </div>
             <button onClick={handleSave} className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200">
                 {loading ? 'Loading...' : 'Save'}

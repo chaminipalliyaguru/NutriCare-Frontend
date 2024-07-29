@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Input, Button } from "@material-tailwind/react";
 import axios from 'axios'
-import RecipeCard from '../Components/Recipe';
+import RecipeCard from '../Components/Recipes/RecipeCard';
 
 function Recipe_vault() {
   const [recipies, setRecipies] = React.useState([])
