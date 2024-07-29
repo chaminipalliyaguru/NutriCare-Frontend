@@ -17,7 +17,7 @@ function HomePage() {
   async function getAll() {
     try {
       setLoading(true)
-      const response = await axios.get('http://localhost:3000/recipe/get-all?limit=3')
+      const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net//recipe/get-all?limit=3')
       setRecipies(response.data)
     } catch (error) {
       setError(error)
