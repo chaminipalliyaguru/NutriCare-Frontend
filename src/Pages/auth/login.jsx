@@ -30,10 +30,17 @@ const LoginPage = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post('/api/login', { email, password });
-      // Handle successful login here (e.g., redirect or store token)
+      const response = await axios.post('http://localhost:3000/user/users/login', { email, password });
+      if(response.data.token) {
+        localStorage.setItem('token', response.data.token);
+        navigate('/');
+      }
     } catch (err) {
+        if(err.response.status === 400) {
+            setError('Invalid email or password');
+        } else {
       setError('Login failed. Please try again.');
+        }
     } finally {
       setLoading(false);
     }
@@ -42,7 +49,7 @@ const LoginPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Admin Login</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Login to NutriCare</h2>
         {error && <div className="bg-red-100 text-red-700 p-3 mb-4 rounded">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
