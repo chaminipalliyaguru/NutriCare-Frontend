@@ -83,6 +83,7 @@ function HomePage() {
 
       {/* 2nd section of the page */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
+        <div className="">
         {!loading && recipies.map((recipe) => {
           return <RecipeCard
             key={recipe._id}
@@ -95,8 +96,10 @@ function HomePage() {
             condition={recipe.condition}
           />
         })}
-
+        </div>
       </div>
+
+      
 
 
       {/* 3rd section of the page */}
@@ -150,6 +153,8 @@ function HomePage() {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 }
