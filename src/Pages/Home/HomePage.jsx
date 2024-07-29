@@ -7,12 +7,10 @@ import Home_carts from "./Home_carts";
 function HomePage() {
   return (
     <div>
-      
       {/* 1st section: welcome part */}
-      <div className="flex items-center justify-between h-50 pt-32 pl-40">
-        <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full max-w-[74rem] flex-row ">
-
-          <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+      <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-16 lg:pt-32 px-4 lg:px-40">
+        <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
+          <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0">
             <img
               src={img_1}
               alt="Meal image"
@@ -20,13 +18,13 @@ function HomePage() {
             />
           </div>
           <div className="p-6">
-            <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
-              Welcome to NutriCare !
+            <h6 className="block mb-4 font-sans text-base font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
+              Welcome to NutriCare!
             </h6>
-            <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            <h4 className="block mb-2 font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900">
               Discover Personalized Health Recipes
             </h4>
-            <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
+            <p className="block mb-8 font-sans text-base font-normal leading-relaxed text-gray-700">
               NutriCare is your ultimate destination for personalized, healthy
               recipes tailored to various health conditions. Our platform
               leverages AI to provide meal recommendations, health tips, and
@@ -34,7 +32,7 @@ function HomePage() {
             </p>
             <a href="#" className="inline-block">
               <button
-                className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
+                className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase transition-all rounded-lg hover:bg-gray-900/10 active:bg-gray-900/20"
                 type="button"
               >
                 Learn More
@@ -50,7 +48,7 @@ function HomePage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                  ></path>
+                  />
                 </svg>
               </button>
             </a>
@@ -58,26 +56,19 @@ function HomePage() {
         </div>
       </div>
 
-      
-<Home_carts/>
+      <Home_carts />
 
       {/* 3rd section of the page */}
-      {/* 1 box */}
-
-      <hr className="w-1/5 mx-auto mt-20" />
-      <div className="grid grid-cols-3 lg:gap-0 justify-items-center bg-amber-50">
-        <div className="py-20 ml-36">
-          <div className="rounded-xl overflow-hidden shadow-lg max-w-sm bg-white">
-            <img
-              src={img_5}
-              alt="Meal image"
-              className="object-cover w-1/2 ml-20"
-            />
+      <hr className="w-1/5 mx-auto my-8" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center bg-amber-50 px-4 lg:px-0">
+        <div className="py-10">
+          <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
+            <img src={img_5} alt="Meal image" className="object-cover w-auto h-40  ml-24" />
             <div className="p-6">
-              <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+              <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900">
                 Instant Health Advice
               </h4>
-              <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
+              <p className="block mt-3 font-sans text-xl font-normal leading-relaxed text-gray-700">
                 Ask questions about nutrition, dietary concerns, or health
                 management, and receive immediate, expert responses to guide
                 your wellness journey.
@@ -86,20 +77,14 @@ function HomePage() {
           </div>
         </div>
 
-        {/* 2 box */}
-
-        <div className="py-20 ml-1.5">
-          <div className="rounded-xl overflow-hidden shadow-lg max-w-sm bg-amber-50 ">
-            <div className="p-6 bg-white">
-              <img
-                src={img_6}
-                alt="Meal image"
-                className="object-cover w-1/2 ml-20"
-              />
-              <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 mt-3">
+        <div className="py-10">
+          <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
+            <img src={img_6} alt="Meal image" className="object-cover w-auto h-40 ml-24" />
+            <div className="p-6">
+              <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900">
                 Personalized Recipes
               </h4>
-              <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
+              <p className="block mt-3 font-sans text-xl font-normal leading-relaxed text-gray-700">
                 Discover a diverse array of recipes tailored to address specific
                 health requirements, ensuring you find meals that fit your
                 dietary needs and preferences perfectly.
@@ -108,21 +93,14 @@ function HomePage() {
           </div>
         </div>
 
-        {/* 3 box */}
-
-        <div className="py-20 mr-36">
-          <div className="rounded-xl overflow-hidden shadow-lg max-w-sm bg-amber-50 ">
-            <div className="p-6 bg-white">
-              <img
-                src={img_7}
-                alt="Meal image"
-                className="object-cover w-1/2 ml-20"
-              />
-
-              <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 mt-7">
+        <div className="py-10">
+          <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
+            <img src={img_7} alt="Meal image" className="object-cover w-auto h-40 ml-24" />
+            <div className="p-6">
+              <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900">
                 Health Providers
               </h4>
-              <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
+              <p className="block mt-3 font-sans text-xl font-normal leading-relaxed text-gray-700">
                 Easily access a network of healthcare professionals, enabling
                 seamless communication and support for your health concerns and
                 queries.
@@ -131,7 +109,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
