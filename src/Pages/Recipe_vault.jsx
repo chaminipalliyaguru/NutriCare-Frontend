@@ -39,7 +39,9 @@ function Recipe_vault() {
   }, [])
 
   useEffect(() => {
+    if(condition=='') getAll();
     searchRecipe()
+
   }, [condition])
 
   return (
