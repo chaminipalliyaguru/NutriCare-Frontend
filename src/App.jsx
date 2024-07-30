@@ -18,6 +18,7 @@ import ArticleView from "./Components/articles/articleView";
 import LoginPage from "./Pages/auth/login";
 import Register from "./Pages/auth/register";
 import Admin from "./Pages/admin";
+import CodeOfConduct from './Pages/Our_story/CodeOfConduct'
 
 function App() {
   return (
@@ -32,10 +33,12 @@ function App() {
         <Route path="/HealthGuide" element={<HealthGuide />} />
         <Route path="/findDoctor" element={<FindDoctor />} />
         {/* <Route path="/recipeView" element={<RecipeView />} /> */}
+        <Route path="/CodeOfConduct" element = {<CodeOfConduct/>} />
         <Route path="/admin" element={<Admin />}>
           <Route path="recipe" element={<RecipeAdmin />} />
           <Route path="doctor" element={<DoctorAdmin />} />
           <Route path="article" element={<ArticleAdmin />} />
+          
         </Route>
         <Route path="/auth/login" element={<LoginPage />} />
         <Route path="/auth/register" element={<Register />} />
