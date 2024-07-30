@@ -16,7 +16,7 @@ const RecipeCard = ({ id, title, description, prepTime, serves, imgSrc,condition
             </p>
             <div className="pt-2">
                 <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-inherit">
-                    {prepTime} - easy prep - {serves} serves
+                    {prepTime}min - easy prep - {serves} serves
                 </p>
                 <div className="mt-4">
                     <Link to={`../Components/Recipes/RecipeView/${id}`}>
