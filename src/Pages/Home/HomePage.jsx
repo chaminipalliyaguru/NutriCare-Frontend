@@ -34,7 +34,7 @@ function HomePage() {
   return (
     <div>
       {/* 1st section: welcome part */}
-      <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-10 lg:pt-20 px-4 lg:px-40">
+      <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-8 lg:pt-20 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
           <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0">
              {/* <div className="flex flex-col lg:flex-row items-center justify-between mt-10 ml-10 mr-10">

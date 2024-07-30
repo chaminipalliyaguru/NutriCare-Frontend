@@ -58,7 +58,7 @@ const Register = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/user/users/register', formData);
+      const response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/user/users/register', formData);
       setSuccess('Registration successful!');
       setFormData({
         username: '',
@@ -68,7 +68,7 @@ const Register = () => {
       });
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
-        navigate('/');
+        navigate('/auth/login');
       }
     } catch (err) {
       setErrors({ general: 'Registration failed. Please try again.' });
@@ -131,6 +131,7 @@ const Register = () => {
               className="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
             {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>}
+            
           </div>
           <button
             type="submit"

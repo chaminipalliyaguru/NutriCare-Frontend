@@ -16,7 +16,7 @@ export default function DoctorAdmin() {
     async function getAll() {
         try {
             setLoading(true);
-            const response = await axios.get('http://localhost:3000/doctor/get-all');
+            const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/doctor/get-all');
             setDoctors(response.data);
         } catch (error) {
             setError(error);
@@ -31,7 +31,7 @@ export default function DoctorAdmin() {
             if (docPosition === '') {
                 return getAll();
             } else {
-                const resp = await axios.get('http://localhost:3000/doctor/search/' + docPosition);
+                const resp = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/doctor/search/' + docPosition);
                 if (resp.data) setDoctors(resp.data);
             }
         } catch (error) {
@@ -45,7 +45,7 @@ export default function DoctorAdmin() {
         try {
             setLoading(true);
             if (window.confirm('Are you sure you want to delete this Doctor?')) {
-                const response = await axios.delete('http://localhost:3000/doctor/delete/' + doctor._id);
+                const response = await axios.delete('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/doctor/delete/' + doctor._id);
                 console.log(response);
                 getAll();
             }

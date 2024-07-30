@@ -50,9 +50,9 @@ export default function ArticleForm({ article, closeForm }) {
             setLoading(true);
             let response;
             if (!article._id) {
-                response = await axios.post('http://localhost:3000/article/create', formArticle);
+                response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/article/create', formArticle);
             } else {
-                response = await axios.put('http://localhost:3000/article/update/' + article._id, formArticle);
+                response = await axios.put('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/article/update/' + article._id, formArticle);
             }
             console.log(response);
         } catch (error) {
