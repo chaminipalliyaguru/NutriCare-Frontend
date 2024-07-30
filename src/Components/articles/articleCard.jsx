@@ -10,7 +10,7 @@ const ArticleCard = ({ id, title, description, content, imgSrc }) => {
             <img className="w-full h-48 object-cover" src={imgSrc} alt={title} />
             <div className="px-4 py-4 sm:px-6 sm:py-6">
                 <div className="font-bold text-lg sm:text-xl md:text-2xl mb-2">{title}</div>
-                <p className="text-gray-700 text-sm sm:text-base md:text-lg">
+                <p className="text-gray-700 text-lg sm:text-base md:text-lg">
                     {description}
                 </p>
             </div>

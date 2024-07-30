@@ -14,10 +14,10 @@ export default function ArticleView() {
         try {
             setLoading(true);
             const response = axios.get(`https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/article/get/${id}`)
-            .then((res) => {
-                console.log(res.data);
-                setArticle(res.data);
-            })
+                .then((res) => {
+                    console.log(res.data);
+                    setArticle(res.data);
+                })
         } catch (error) {
             console.error(error);
         } finally {
@@ -34,19 +34,26 @@ export default function ArticleView() {
     }
 
     return (
-        <div>
-            <div>
-                <h1 className='text-center mt-14 text-6xl mr-20  font-semibold text-gray-900'>
+        <div className="px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+                <h1 className="text-center mt-14 text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-900">
                     {article.title}
                 </h1>
-                <div className='mr-44'>
-                    <img src={article.imgSrc} alt={article.title} className='ml-20 w-full' />
+                <div className="mt-8 flex justify-center">
+                    <img
+                        src={article.imgSrc}
+                        alt={article.title}
+                        className="w-full max-w-full sm:max-w-lg lg:max-w-3xl rounded-lg shadow-lg"
+                    />
+                </div>
+                <div className="mt-8 mx-auto max-w-full sm:max-w-2xl lg:max-w-3xl text-gray-900">
+                    <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+                        {article.content}
+                    </p>
                 </div>
             </div>
-            <div className='ml-20 text-xs mr-20 text-gray-900'>
-                <p className='mb-6 mt-5'>{article.content}</p>
-            </div>
         </div>
+
     );
 
 }
