@@ -6,23 +6,26 @@ const ArticleCard = ({ id, title, description, content, imgSrc }) => {
     console.log("title", title);
 
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto mt-12 sm:ml-48">
-            <img className="w-full" src={imgSrc} alt={title} />
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{title}</div>
-                <p className="text-gray-700 text-base">
+        <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl rounded overflow-hidden shadow-lg mx-4 sm:mx-auto mt-12">
+            <img className="w-full h-48 object-cover" src={imgSrc} alt={title} />
+            <div className="px-4 py-4 sm:px-6 sm:py-6">
+                <div className="font-bold text-lg sm:text-xl md:text-2xl mb-2">{title}</div>
+                <p className="text-gray-700 text-sm sm:text-base md:text-lg">
                     {description}
                 </p>
             </div>
-            <Link to={`../Components/articles/articleView/${id}`}>
-                <button
-                    className="w-full sm:w-auto select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none bg-gray-900 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-3 px-6 rounded-lg text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-                    type="button"
-                >
-                    VIEW RECIPE
-                </button>
-            </Link>
+            <div className="px-4 sm:px-6 pb-4">
+                <Link to={`../Components/articles/articleView/${id}`}>
+                    <button
+                        className="w-full select-none font-sans font-bold text-center uppercase transition-all bg-gray-900 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-85 focus:shadow-none active:opacity-85 active:shadow-none"
+                        type="button"
+                    >
+                        VIEW RECIPE
+                    </button>
+                </Link>
+            </div>
         </div>
+
     );
 }
 
