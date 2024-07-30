@@ -26,11 +26,21 @@ export default function Header() {
         </div>
       </div>
       <nav className={`sm:flex ${isOpen ? 'block' : 'hidden'}`}>
-        <Link to="/recipe_vault" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Recipe Vault</Link>
-        <Link to="/assistant" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Virtual Assistant</Link>
-        <Link to="/HealthGuide" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Health Guide</Link>
-        <Link to="/findDoctor" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Find Your Doctor</Link>
-        <Link to="/about_us" className="mt-1 block px-2 py-1 mx-3 text-gray-900 font-semibold rounded hover:bg-gray-300">Our Story</Link>
+        <Link to="/recipe_vault" className="mt-2 sm:mt-0 block px-4 py-2 mx-2 sm:mx-4 text-gray-900 font-semibold rounded hover:bg-gray-300">
+          Recipe Vault
+        </Link>
+        <Link to="/assistant" className="mt-2 sm:mt-0 block px-4 py-2 mx-2 sm:mx-4 text-gray-900 font-semibold rounded hover:bg-gray-300">
+          Virtual Assistant
+        </Link>
+        <Link to="/HealthGuide" className="mt-2 sm:mt-0 block px-4 py-2 mx-2 sm:mx-4 text-gray-900 font-semibold rounded hover:bg-gray-300">
+          Health Guide
+        </Link>
+        <Link to="/findDoctor" className="mt-2 sm:mt-0 block px-4 py-2 mx-2 sm:mx-4 text-gray-900 font-semibold rounded hover:bg-gray-300">
+          Find Your Doctor
+        </Link>
+        <Link to="/about_us" className="mt-2 sm:mt-0 block px-4 py-2 mx-2 sm:mx-4 text-gray-900 font-semibold rounded hover:bg-gray-300">
+          Our Story
+        </Link>
       </nav>
     </header>
   );
