@@ -7,22 +7,27 @@ const DoctorCard = ({ id, docName, docPosition, docDesc, docNumber, docImg }) =>
     console.log("docImg", docImg);
     return (
         <div
-            className="h-36 flex flex-col rounded-lg bg-amber-50 text-black shadow-secondary-1 dark:bg-surface-dark md:max-w-1xl md:flex-row mt-2 ml-40 mr-36">
-            <img
-                className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:!rounded-none md:!rounded-s-lg"
-                src={docImg}
-                alt={docName} />
-            <div className="flex flex-col justify-start p-3">
-                <h5 className="mb-0.5 text-xl font-semibold font-medium text-black">{docName}</h5>
-                <p className="text-xs text-black">
-                    {docPosition}
-                </p>
-                <p className="mb-2 mt-2 text-base text-black">
-                    {docDesc}
-                </p>
-                <p className='font-semibold text-black'>Contact: {docNumber}</p>
-            </div>
+        className="h-auto max-w-full flex flex-col rounded-lg bg-amber-50 text-black shadow-secondary-1 dark:bg-surface-dark md:max-w-1xl md:flex-row mt-2 mx-4 md:mx-8">
+        <img
+            className="w-full h-48 object-cover rounded-t-lg md:w-48 md:h-auto md:rounded-l-lg"
+            src={docImg}
+            alt={docName} />
+        <div className="flex flex-col justify-start p-4 md:p-6">
+            <h5 className="mb-1 text-lg font-semibold text-black md:text-xl">{docName}</h5>
+            <p className="text-sm text-black">{docPosition}</p>
+            <p className="mb-2 mt-2 text-sm md:text-base text-black">{docDesc}</p>
+            <button
+                className="mt-2 bg-yellow-200 text-black font-semibold py-2 px-4 border border-yellow-800 hover:border-transparent rounded w-full max-w-xs sm:max-w-sm"
+                onClick={() => window.location.href = `tel:${docNumber}`}
+            >
+                Contact: {docNumber}
+            </button>
         </div>
+    </div>
+    
+    
+    
+    
     );
 }
 

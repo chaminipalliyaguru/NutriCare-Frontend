@@ -25,11 +25,12 @@ function FindDoctor() {
 
   return (
     <div>
-      <div className='mt-16 font-serif flex text-center justify-between font-semibold text-stone-700 text-5xl subpixel-antialiased tracking-normal p-16 ml-96'>
+      <div className='mt-16 font-serif flex flex-col text-center font-semibold text-stone-700 text-3xl md:text-4xl lg:text-5xl subpixel-antialiased tracking-normal p-8 md:p-12 lg:p-16 mx-4 md:mx-8 lg:mx-16'>
         <p>
           Connect with Trusted <br /> Healthcare Professionals
         </p>
       </div>
+
       <div>
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error.message}</p>}
