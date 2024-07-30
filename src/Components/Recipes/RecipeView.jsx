@@ -51,7 +51,7 @@ export default function RecipeView() {
                     <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
                         <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
                             <div className="flex items-center w-full p-3 leading-tight text-center">
-                                Preparation Time: {recipe.prepTime}
+                                Prep Time: {recipe.prepTime}
                             </div>
                             <div className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start">
                                 Condition: {recipe.condition}

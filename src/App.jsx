@@ -32,7 +32,6 @@ function App() {
         <Route path="/our_team" element={<Our_team />} />
         <Route path="/HealthGuide" element={<HealthGuide />} />
         <Route path="/findDoctor" element={<FindDoctor />} />
-        {/* <Route path="/recipeView" element={<RecipeView />} /> */}
         <Route path="/CodeOfConduct" element = {<CodeOfConduct/>} />
         <Route path="/admin" element={<Admin />}>
           <Route path="recipe" element={<RecipeAdmin />} />
