@@ -55,9 +55,9 @@ export default function RecipeForm({ recipe, closeForm }) {
             setLoading(true);
             let response;
             if (!recipe._id) {
-                response = await axios.post('http://localhost:3000/recipe/create', formRecipe);
+                response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/create', formRecipe);
             } else {
-                response = await axios.put('http://localhost:3000/recipe/update/' + recipe._id, formRecipe);
+                response = await axios.put('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/update/' + recipe._id, formRecipe);
             }
             console.log(response);
         } catch (error) {

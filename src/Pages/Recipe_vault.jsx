@@ -13,7 +13,7 @@ function Recipe_vault() {
   async function getAll() {
     try {
       setLoading(true)
-      const response = await axios.get('http://localhost:3000/recipe/get-all')
+      const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/get-all')
       setRecipies(response.data)
     } catch (error) {
       setError(error)
@@ -25,7 +25,7 @@ function Recipe_vault() {
   async function searchRecipe() {
     try {
       setLoading(true);
-      const resp = await axios.get('http://localhost:3000/recipe/search/' + condition);
+      const resp = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/search/' + condition);
       if (resp.data) setRecipies(resp.data);
     } catch (error) {
       console.error(error);
