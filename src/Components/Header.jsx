@@ -6,7 +6,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+    <header className="bg-white sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-1">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
           <Link to="/">
