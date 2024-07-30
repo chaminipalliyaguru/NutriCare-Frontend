@@ -56,12 +56,12 @@ function Our_team() {
                 <p className='mt-6'>Get to know the passionate individuals behind NutriCure, dedicated to bringing you</p>
                 <p>personalized, healthy recipes and valuable health resources.</p>
             </div>
-            <section id="Projects" className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-44 ml-32 mb-5 mr-54 mt-24">
+            <section id="Projects" className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10 gap-x-10 px-4 md:px-10 lg:px-20 py-10">
                 {Members.map((member) => (
-                    <div key={member.id} className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <div key={member.id} className="w-full max-w-xs bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                         <a href="#">
-                            <img src={member.image_url} alt={member.name} className="h-80 w-72 object-cover rounded-t-xl" />
-                            <div className="px-4 py-3 w-72">
+                            <img src={member.image_url} alt={member.name} className="h-80 w-full object-cover rounded-t-xl" />
+                            <div className="px-4 py-3">
                                 <p className="text-2xl text-center font-bold text-black truncate block capitalize mt-4">{member.name}</p>
                                 <p className="text-lg text-center text-black cursor-auto my-2">{member.position}</p>
                                 <div className="flex justify-center mt-2">
