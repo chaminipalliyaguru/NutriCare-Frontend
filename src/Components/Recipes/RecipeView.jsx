@@ -31,11 +31,6 @@ export default function RecipeView() {
     }, [params.id])
 
     return (
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> 51af88d68eaf230361323c6246d5288d4bfd963a
         <div>
 
             <h1 className="font-bold text-6xl text-center mt-8">{recipe.title}<br />
@@ -56,7 +51,7 @@ export default function RecipeView() {
                     <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
                         <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
                             <div className="flex items-center w-full p-3 leading-tight text-center">
-                                Prep Time: {recipe.prepTime}
+                                Preparation Time: {recipe.prepTime}
                             </div>
                             <div className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start">
                                 Condition: {recipe.condition}
