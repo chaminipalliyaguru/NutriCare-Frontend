@@ -31,7 +31,11 @@ export default function RecipeView() {
     }, [params.id])
 
     return (
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 51af88d68eaf230361323c6246d5288d4bfd963a
         <div>
 
             <h1 className="font-bold text-6xl text-center mt-8">{recipe.title}<br />

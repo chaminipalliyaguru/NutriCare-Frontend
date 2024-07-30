@@ -34,7 +34,7 @@ function HomePage() {
   return (
     <div>
       {/* 1st section: welcome part */}
-      <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-10 lg:pt-32 px-4 lg:px-40">
+      <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-10 lg:pt-20 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
           <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0">
              {/* <div className="flex flex-col lg:flex-row items-center justify-between mt-10 ml-10 mr-10">
@@ -88,7 +88,7 @@ function HomePage() {
       </div>
 
       {/* 2nd section of the page */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8 mb-24 px-4 sm:px-6 lg:px-8">
         {!loading && recipies.map((recipe) => {
           return <RecipeCard
             key={recipe._id}
@@ -104,59 +104,64 @@ function HomePage() {
 
       </div>
 
-
       {/* 3rd section of the page */}
-      <hr className="w-1/5 mx-auto my-10 mt-96" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center bg-amber-50 px-4 lg:px-0">
-        <div className="py-8">
+      <hr className="w-1/5 mx-auto my-10 mt-24 border-gray-300" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 lg:px-0 bg-amber-50">
+        <div className="py-8 flex justify-center">
           <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
-            <img src={img_5} alt="Meal image" className="object-cover w-auto h-40  ml-24" />
+          <div className="flex justify-center pt-8">
+              <img src={img_5} alt="Health Providers" className="object-cover w-auto h-30" />
+            </div>
+
             <div className="p-6">
-              <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900">
+              <h4 className="text-2xl font-semibold text-blue-gray-900 mb-3">
                 Instant Health Advice
               </h4>
-              <p className="block mt-3 font-sans text-xl font-normal leading-relaxed text-gray-700">
-                Ask questions about nutrition, dietary concerns, or health
-                management, and receive immediate, expert responses to guide
-                your wellness journey.
+              <p className="text-lg font-normal text-gray-700">
+                Ask questions about nutrition, dietary concerns, or health management, and receive immediate, expert responses to guide your wellness journey.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="py-10">
+        <div className="py-8 flex justify-center">
           <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
-            <img src={img_6} alt="Meal image" className="object-cover w-auto h-40 ml-24" />
+          <div className="flex justify-center pt-8">
+              <img src={img_6} alt="Health Providers" className="object-cover w-auto h-30" />
+            </div>
+
             <div className="p-6">
-              <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900">
+              <h4 className="text-2xl font-semibold text-blue-gray-900 mb-3">
                 Personalized Recipes
               </h4>
-              <p className="block mt-3 font-sans text-xl font-normal leading-relaxed text-gray-700">
-                Discover a diverse array of recipes tailored to address specific
-                health requirements, ensuring you find meals that fit your
-                dietary needs and preferences perfectly.
+              <p className="text-lg font-normal text-gray-700">
+                Discover a diverse array of recipes tailored to address specific health requirements, ensuring you find meals that fit your dietary needs and preferences perfectly.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="py-10">
+        <div className="py-8 flex justify-center">
           <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
-            <img src={img_7} alt="Meal image" className="object-cover w-auto h-40 ml-24" />
+            <div className="flex justify-center pt-8">
+              <img src={img_7} alt="Health Providers" className="object-cover w-auto h-30" />
+            </div>
+
+
             <div className="p-6">
-              <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900">
+              <h4 className="text-2xl font-semibold text-blue-gray-900 mb-3">
                 Health Providers
               </h4>
-              <p className="block mt-3 font-sans text-xl font-normal leading-relaxed text-gray-700">
-                Easily access a network of healthcare professionals, enabling
-                seamless communication and support for your health concerns and
-                queries 
+              <p className="text-lg font-normal text-gray-700">
+                Easily access a network of healthcare professionals, enabling seamless communication and support for your health concerns and queries.
               </p>
             </div>
           </div>
         </div>
       </div>
+
     </div>
+
   );
 }
 
