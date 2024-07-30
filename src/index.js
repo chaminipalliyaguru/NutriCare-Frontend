@@ -8,10 +8,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Recipe_vault from './Pages/Recipe_vault';
-import About_us from './Pages/Our_story/About_us'
-import HealthGuide from './Pages/HealthGuide';
 
+const App = React.lazy(() => import('./App'));
+const Recipe_vault = React.lazy(() => import('./Pages/Recipe_vault'));
+const About_us = React.lazy(() => import('./Pages/Our_story/About_us'));
+const HealthGuide = React.lazy(() => import('./Pages/HealthGuide'));
 
 const router = createBrowserRouter([
   {
@@ -27,13 +28,12 @@ const router = createBrowserRouter([
     element: <About_us/>,
   },
   {
-    path: "HealthGuide",
+    path: "health_guide",
     element: <HealthGuide/>,
   },
 ]);
 
-
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
