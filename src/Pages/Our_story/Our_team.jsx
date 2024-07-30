@@ -9,30 +9,35 @@ const Members = [
         id: "1",
         name: "Sahan Madushka",
         position: "Backend Developer",
+        number: "(+94 764506867)",
         image_url: img_4,
     },
     {
         id: "2",
         name: "S. Sajani",
         position: "Frontend Developer",
+        number: "(+94 715686867)",
         image_url: img_3,
     },
     {
         id: "3",
         name: "Chamini Palliyaguru",
         position: "Frontend Developer",
+        number: "(+94 773686887)",
         image_url: img_1,
     },
     {
         id: "4",
         name: "Abishek Haththakage",
-        position: "Devops Engineer",
+        position: "Backend Developer",
+        number: "(+94 718906269)",
         image_url: img_5,
     },
     {
         id: "5",
         name: "M.S.S. Begam",
         position: "Frontend Developer",
+        number: "(+94 712506697)",
         image_url: img_2,
     },
 
@@ -56,10 +61,10 @@ function Our_team(){
           <img src={member.image_url}
                   alt="Product" className="h-80 w-72 object-cover rounded-t-xl" />
           <div className="px-4 py-3 w-72">
-              {/* <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span> */}
               <p className="text-2xl text-center font-bold text-black truncate block capitalize mt-4">{member.name}</p>
                   <p className="text-lg text-center text-black cursor-auto my-2">{member.position}</p>
-                
+                  <p className="text-lg text-center text-black cursor-auto">{member.number}</p>
+
           </div>
       </a>
  </div> 

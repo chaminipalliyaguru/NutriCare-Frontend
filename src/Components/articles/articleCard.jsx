@@ -20,7 +20,7 @@ const ArticleCard = ({ id, title, description, content, imgSrc }) => {
                         className="w-full select-none font-sans font-bold text-center uppercase transition-all bg-gray-900 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-85 focus:shadow-none active:opacity-85 active:shadow-none"
                         type="button"
                     >
-                        VIEW RECIPE
+                        READ MORE
                     </button>
                 </Link>
             </div>

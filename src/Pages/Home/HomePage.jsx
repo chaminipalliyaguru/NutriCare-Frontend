@@ -5,6 +5,7 @@ import img_7 from "../../assets/surgery-img.png";
 import React, { useEffect, useState } from 'react'
 import { Input, Button } from "@material-tailwind/react";
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 import RecipeCard from "../../Components/Recipes/RecipeCard";
 
 function HomePage() {
@@ -36,12 +37,17 @@ function HomePage() {
       <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-8 lg:pt-20 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
           <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0">
-            <img
+             {/* <div className="flex flex-col lg:flex-row items-center justify-between mt-10 ml-10 mr-10">
+        <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
+          <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0 "> */}
+          <img 
               src={img_1}
               alt="Meal image"
               className="object-cover w-full h-full"
             />
           </div>
+
+
           <div className="p-6">
             <h6 className="block mb-4 font-sans text-base font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
               Welcome to NutriCare!
@@ -55,7 +61,7 @@ function HomePage() {
               leverages AI to provide meal recommendations, health tips, and
               resources to help you manage your wellness effectively.
             </p>
-            <a href="#" className="inline-block">
+            <Link to ='/recipe_vault' className="inline-block">
               <button
                 className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase transition-all rounded-lg hover:bg-gray-900/10 active:bg-gray-900/20"
                 type="button"
@@ -76,7 +82,7 @@ function HomePage() {
                   />
                 </svg>
               </button>
-            </a>
+              </Link>
           </div>
         </div>
       </div>
