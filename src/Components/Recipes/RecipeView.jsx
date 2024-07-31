@@ -33,8 +33,7 @@ export default function RecipeView() {
     return (
         <div>
 
-            <h1 className="font-bold text-6xl text-center mt-8">{recipe.title}<br />
-                Wraps</h1>
+            <h1 className="font-bold text-6xl text-center mt-8">{recipe.title}</h1>
 
             <img
                 className="w-full max-w-full sm:w-3/4 md:w-2/3 lg:w-5/6 max-h-96 rounded-lg object-cover object-center ml-4 sm:ml-8 md:ml-12 lg:ml-36 mt-4 sm:mt-8 md:mt-12"
