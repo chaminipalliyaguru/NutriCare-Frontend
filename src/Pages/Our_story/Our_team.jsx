@@ -53,7 +53,7 @@ function Our_team() {
         <section id="Projects">
             <div className="text-center p-10">
                 <h1 className="font-bold text-6xl mb-4 mt-16">Meet Our Team</h1>
-                <p className='mt-6'>Get to know the passionate individuals behind NutriCure, dedicated to bringing you</p>
+                <p className='mt-6'>Get to know the passionate individuals behind NutriCare, dedicated to bringing you</p>
                 <p>personalized, healthy recipes and valuable health resources.</p>
             </div>
             <section id="Projects" className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-10 gap-x-10 px-4 md:px-10 lg:px-20 py-10">
