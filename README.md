@@ -12,7 +12,11 @@ NutriCare is an innovative web application designed to suggest recipe related to
 ## Technology Stack
 
 Frontend: React, Tailwind CSS
+
 Backend: Node.js, Express
+
 Database: MongoDB
+
 AI Integration: Azure OpenAI
+
 Hosting: Azure
