@@ -1,8 +1,18 @@
-# React + Vite
+# NutriCare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NutriCare is an innovative web application designed to suggest recipe related to user's illness. Leveraging the power of AI, NutriCare offers solution problems about health and recipe checker insights into maintaining a healthy lifestyle.
 
-Currently, two official plugins are available:
+## Features
+1. Health Condition Filters
+2. Allergen Detection
+3. Educational Resources
+4. Doctor Profiles
+   
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technology Stack
+
+Frontend: React, Tailwind CSS
+Backend: Node.js, Express
+Database: MongoDB
+AI Integration: Azure OpenAI
+Hosting: Azure
