@@ -33,7 +33,7 @@ const LoginPage = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/user/users/login', { email, password });
+      const response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/user/users/login', { email, password });
       if(response.data.token) {
         localStorage.setItem('token', response.data.token);
         navigate('/admin/recipe');

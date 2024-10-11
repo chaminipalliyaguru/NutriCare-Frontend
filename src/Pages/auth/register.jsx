@@ -58,7 +58,7 @@ const Register = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/user/users/register', formData);
+      const response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/user/users/register', formData);
       setSuccess('Registration successful!');
       setFormData({
         username: '',
