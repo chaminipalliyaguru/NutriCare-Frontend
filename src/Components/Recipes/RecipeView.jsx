@@ -13,7 +13,7 @@ export default function RecipeView() {
         console.log("id", id);
         try {
             setLoading(true)
-            const response = axios.get(`https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/get/${id}`)
+            const response = axios.get(`https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/recipe/get/${id}`)
                 .then((res) => {
                     console.log(res.data);
                     setRecipe(res.data);

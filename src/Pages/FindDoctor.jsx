@@ -10,7 +10,7 @@ function FindDoctor() {
   async function getAll() {
     try {
       setLoading(true)
-      const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/doctor/get-all')
+      const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/doctor/get-all')
       setDoctors(response.data)
     } catch (error) {
       setError(error)

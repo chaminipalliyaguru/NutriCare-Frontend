@@ -52,9 +52,9 @@ export default function DoctorForm({ doctor, closeForm }) {
             setLoading(true);
             let response;
             if (!doctor._id) {
-                response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/doctor/create', formDoctor);
+                response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/doctor/create', formDoctor);
             } else {
-                response = await axios.put('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/doctor/update/' + doctor._id, formDoctor);
+                response = await axios.put('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/doctor/update/' + doctor._id, formDoctor);
             }
             console.log(response);
         } catch (error) {
