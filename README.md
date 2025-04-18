@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="src/assets/Logo1.png" alt="NutriCare Logo" width="50%">
+<img src="src/assets/logobar.png" alt="NutriCare Logo" width="95%">
 
 <br/>
 
