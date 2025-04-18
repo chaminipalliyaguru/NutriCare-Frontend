@@ -20,7 +20,7 @@
 
 //     const sendToServer = async (message) => {
 //       setIsThinking(true);
-//       const response = await fetch("https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/ask-bot", {
+//       const response = await fetch("https://nutricare-backend.vercel.app/ask-bot", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -116,7 +116,7 @@ const MessageBox = () => {
     const sendToServer = async (message) => {
       setIsThinking(true);
       const response = await fetch(
-        "https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/ask-bot",
+        "https://nutricare-backend.vercel.app/ask-bot",
         {
           method: "POST",
           headers: {

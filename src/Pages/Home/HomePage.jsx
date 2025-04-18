@@ -18,7 +18,7 @@ function HomePage() {
   async function getAll() {
     try {
       setLoading(true)
-      const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/recipe/get-all?limit=3')
+      const response = await axios.get('https://nutricare-backend.vercel.app/recipe/get-all?limit=3')
       setRecipies(response.data)
     } catch (error) {
       setError(error)
