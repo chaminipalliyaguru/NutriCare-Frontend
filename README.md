@@ -32,8 +32,8 @@ NutriCare is a web application that provides personalized healthy recipes for us
 
 ## Live Demo
 
-Experience NutriCare live!  
-👉 [Live Demo](https://ashy-island-0ed3b1600.5.azurestaticapps.net/)
+Full demo video: [https://nutricareweb.vercel.app](https://nutricareweb.vercel.app)
+
 
 ## Technology Stack
 
@@ -46,7 +46,14 @@ Experience NutriCare live!
 
 ## Backend Repository
 
-<a href="https://github.com/abhixsh/NutriCare_be" target="_blank"><img width="95%" alt="Backend Repo" src="https://i.ibb.co/b5Fdv08W/Group-1.png"/></a>
+<a href="https://github.com/abhixsh/NutriCare_be" target="_blank">
+  <img width="95%" alt="Backend Repo" src="https://i.ibb.co/b5Fdv08W/Group-1.png"/>
+</a>
+<div align="center">
+  <strong>Click here to go to the backend repository</strong>
+</div>
+
+
 
 ## Local Development
 
