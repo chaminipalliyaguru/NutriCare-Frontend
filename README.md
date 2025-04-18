@@ -1,6 +1,8 @@
 <div align="center">
 
-[![Create Go App][repo_logo_img]][repo_url]
+<img src="src/assets/Logo1.png" alt="NutriCare Logo" width="50%">
+
+<br/>
 
 # NutriCare – Healthy Recipe Generator
 
@@ -46,7 +48,7 @@ Full demo video: [https://nutricareweb.vercel.app](https://nutricareweb.vercel.a
 
 ## Backend Repository
 
-<a href="https://github.com/abhixsh/NutriCare_be" target="_blank">
+<a href="https://github.com/abhixsh/NutriCare_backend" target="_blank">
   <img width="95%" alt="Backend Repo" src="https://i.ibb.co/b5Fdv08W/Group-1.png"/>
 </a>
 <div align="center">
@@ -69,7 +71,7 @@ git clone https://github.com/yourusername/NutriCare-Frontend.git
 cd NutriCare-Frontend
 
 # Backend
-git clone https://github.com/abhixsh/NutriCare_be.git
+git clone https://github.com/abhixsh/NutriCare_backend.git
 cd NutriCare_be
 ```
 
