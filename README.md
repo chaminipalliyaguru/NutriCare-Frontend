@@ -46,7 +46,7 @@ Experience NutriCare live!
 
 ## Backend Repository
 
-<a href="https://github.com/abhixsh/NutriCare_be" target="_blank"><img width="99%" alt="gowebly project" src="https://raw.githubusercontent.com/gowebly/.github/main/images/gowebly-project-banner.svg"/></a>
+<a href="https://github.com/abhixsh/NutriCare_be" target="_blank"><img width="99%" alt="Backend Repo" src="https://i.ibb.co/b5Fdv08W/Group-1.png"/></a>
 
 ## Local Development
 
@@ -92,8 +92,8 @@ A win-win cooperation! We invite you to participate in this project. Let's work 
 
 ### How to Contribute
 
-- [Issues][repo_issues_url]: ask questions and submit your features
-- [Pull requests][repo_pull_request_url]: send your improvements to the current codebase
+- Issues: ask questions and submit your features
+- Pull requests: send your improvements to the current codebase
 
 Together, we can make this project **better** every day!
 
