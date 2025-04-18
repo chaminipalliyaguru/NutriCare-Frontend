@@ -46,7 +46,7 @@ Experience NutriCare live!
 
 ## Backend Repository
 
-<a href="https://github.com/abhixsh/NutriCare_be" target="_blank"><img width="99%" alt="Backend Repo" src="https://i.ibb.co/b5Fdv08W/Group-1.png"/></a>
+<a href="https://github.com/abhixsh/NutriCare_be" target="_blank"><img width="95%" alt="Backend Repo" src="https://i.ibb.co/b5Fdv08W/Group-1.png"/></a>
 
 ## Local Development
 
