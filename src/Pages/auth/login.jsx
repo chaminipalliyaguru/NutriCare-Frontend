@@ -19,8 +19,8 @@ const LoginPage = () => {
       setError('Invalid email address');
       return false;
     }
-    if (password.length < 8) {
-      setError('Password must be at least 8 characters long');
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters long');
       return false;
     }
     setError('');
@@ -33,7 +33,7 @@ const LoginPage = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/user/users/login', { email, password });
+      const response = await axios.post('https://nutricare-backend.vercel.app/user/users/login', { email, password });
       if(response.data.token) {
         localStorage.setItem('token', response.data.token);
         navigate('/admin/recipe');

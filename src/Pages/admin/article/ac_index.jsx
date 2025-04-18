@@ -16,7 +16,7 @@ export default function ArticleAdmin() {
     async function getAll() {
         try {
             setLoading(true);
-            const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/article/get-all');
+            const response = await axios.get('https://nutricare-backend.vercel.app/article/get-all');
             setArticles(response.data);
         } catch (error) {
             setError(error);
@@ -31,7 +31,7 @@ export default function ArticleAdmin() {
             if (title === '') {
                 return getAll();
             } else {
-                const resp = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/article/search/' + title);
+                const resp = await axios.get('https://nutricare-backend.vercel.app/article/search/' + title);
                 if (resp.data) setArticles(resp.data); // Corrected here
             }
         } catch (error) {
@@ -45,7 +45,7 @@ export default function ArticleAdmin() {
         try {
             setLoading(true);
             if (window.confirm('Are you sure you want to delete this Article?')) {
-                const response = await axios.delete('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/article/delete/' + article._id);
+                const response = await axios.delete('https://nutricare-backend.vercel.app/article/delete/' + article._id);
                 console.log(response);
                 getAll();
             }
