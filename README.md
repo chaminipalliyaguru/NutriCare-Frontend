@@ -67,7 +67,7 @@ Full demo video: [https://nutricareweb.vercel.app](https://nutricareweb.vercel.a
 1. Clone the repositories:
 ```bash
 # Frontend
-git clone https://github.com/yourusername/NutriCare-Frontend.git
+git clone https://github.com/chaminipalliyaguru/NutriCare-Frontend.git
 cd NutriCare-Frontend
 
 # Backend
@@ -89,7 +89,7 @@ npm install
 3. Start development servers:
 ```bash
 # Frontend
-npm start
+npm run dev
 
 # Backend
 Node index.js
