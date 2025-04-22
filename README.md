@@ -1,18 +1,41 @@
-# NutriCare
+<div align="center">
 
-NutriCare is an innovative web application designed to suggest personalized recipes based on specific health conditions. By leveraging AI technology, NutriCare helps users make better dietary choices and manage health concerns while promoting a balanced lifestyle. The platform also offers helpful resources like educational articles and a directory of healthcare professionals.
+<img src="src/assets/logobar.png" alt="NutriCare Logo" width="95%">
+
+<br/>
+
+# NutriCare – Healthy Recipe Generator
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+NutriCare is a web app that gives AI-based healthy recipes and connects users with doctors.
+
+</div>
+
+# About the Project
+
+NutriCare is a web application that provides personalized healthy recipes for users with specific health conditions. By integrating OpenAI, NutriCare generates meal suggestions, nutritional analysis, and offers a directory of healthcare professionals—all in one user-friendly platform. The project was developed to address the lack of comprehensive, multi-condition dietary platforms, aiming to empower users to make informed nutritional choices and manage their health more effectively.
 
 ## Features
 
-- **Health Condition Filters**: Tailored recipes based on user-reported illnesses.
-- **Allergen Detection**: Identifies and avoids allergens in suggested recipes.
-- **Educational Resources**: A variety of health-related articles to expand user knowledge.
-- **Doctor Profiles**: A directory of healthcare providers with contact information and specialties.
+- **Health Condition Filters**: Tailor recipes to user-reported illnesses and restrictions
+- **Allergen Detection**: Avoids allergens in suggested recipes
+- **Educational Resources**: Curated health and nutrition articles
+- **Doctor Profiles**: Directory of healthcare providers with contact info and specialties
+- **AI Chatbot**: Answers health-related questions and offers dietary advice
+- **User Roles**: Patients, caregivers, health enthusiasts, and doctors/nutritionists
+- **Admin Panel**: Manage recipes, articles, and users (future enhancement)
 
 ## Live Demo
 
-Experience NutriCare live!  
-👉 [Live Demo Link](https://ashy-island-0ed3b1600.5.azurestaticapps.net/)
+Full demo video: [https://nutricareweb.vercel.app](https://nutricareweb.vercel.app)
+
 
 ## Technology Stack
 
@@ -21,71 +44,68 @@ Experience NutriCare live!
 - **Database**: MongoDB
 - **AI Integration**: Azure OpenAI
 - **Hosting**: Azure Web App, Docker
-- **Containerization & CI/CD**: Azure Container Registry, Azure DevOps
+- **CI/CD**: Azure Container Registry, Azure DevOps
 
 ## Backend Repository
 
-For more details on the backend, check out the repository:  
-👉 [Backend Repository Link](https://github.com/abhixsh/NutriCare_be)
+<a href="https://github.com/abhixsh/NutriCare_backend" target="_blank">
+  <img width="95%" alt="Backend Repo" src="https://i.ibb.co/b5Fdv08W/Group-1.png"/>
+</a>
+<div align="center">
+  <strong>Click here to go to the backend repository</strong>
+</div>
 
-## Screenshots
 
-Here are a few screenshots of NutriCare in action:
 
-![Landing](img/landing.jpeg)
-![Digram](img/dig.jpeg)
-![Azure](img/azure.jpeg)
-![AzureDevops](img/devops.jpeg)
-## Running Locally
+## Local Development
 
-To run NutriCare locally, follow these steps:
+### Prerequisites
+- Node.js and npm installed
 
-### Clone the repositories:
+### Installation
 
-**Frontend:**
+1. Clone the repositories:
 ```bash
-git clone https://github.com/yourusername/NutriCare-Frontend.git
+# Frontend
+git clone https://github.com/chaminipalliyaguru/NutriCare-Frontend.git
 cd NutriCare-Frontend
+
+# Backend
+git clone https://github.com/abhixsh/NutriCare_backend.git
+cd NutriCare_be
 ```
 
-**Backend:**
+2. Install dependencies:
 ```bash
-git clone https://github.com/yourusername/NutriCare-Backend.git
-cd NutriCare-Backend
-```
-
-### Install dependencies for both frontend and backend:
-
-**Frontend:**
-```bash
+# Frontend
 cd NutriCare-Frontend
+npm install
+
+# Backend
+cd NutriCare_backend
 npm install
 ```
 
-**Backend:**
+3. Start development servers:
 ```bash
-cd NutriCare-Backend
-npm install
+# Frontend
+npm run dev
+
+# Backend
+Node index.js
 ```
 
-### Start the development servers:
+## Contributing
 
-**Frontend:**
-```bash
-cd NutriCare-Frontend
-npm start
-```
+A win-win cooperation! We invite you to participate in this project. Let's work together to create the most useful tool for developers on the web today.
 
-**Backend:**
-```bash
-cd NutriCare-Backend
-npm start
-```
+### How to Contribute
 
-### Open your browser and navigate to:
+- Issues: ask questions and submit your features
+- Pull requests: send your improvements to the current codebase
 
-```bash
-http://localhost:3000
-```
+Together, we can make this project **better** every day!
 
-Make sure you have Node.js and npm installed on your machine before running these commands.
+## License
+
+This project is licensed under the MIT License.

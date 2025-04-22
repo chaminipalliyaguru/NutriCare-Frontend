@@ -16,7 +16,7 @@ export default function RecipeAdmin() {
     async function getAll() {
         try {
             setLoading(true);
-            const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/get-all');
+            const response = await axios.get('https://nutricare-backend.vercel.app/recipe/get-all');
             setRecipes(response.data);
         } catch (error) {
             setError(error);
@@ -31,7 +31,7 @@ export default function RecipeAdmin() {
             if (condition === '') {
                 return getAll();
             } else {
-                const resp = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/search/' + condition);
+                const resp = await axios.get('https://nutricare-backend.vercel.app/recipe/search/' + condition);
                 if (resp.data) setRecipes(resp.data);
             }
         } catch (error) {
@@ -45,7 +45,7 @@ export default function RecipeAdmin() {
         try {
             setLoading(true);
             if (window.confirm('Are you sure you want to delete this recipe?')) {
-                const response = await axios.delete('https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/recipe/delete/' + recipe._id);
+                const response = await axios.delete('https://nutricare-backend.vercel.app/recipe/delete/' + recipe._id);
                 console.log(response);
                 getAll();
             }

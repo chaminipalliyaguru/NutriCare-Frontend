@@ -13,7 +13,7 @@ export default function ArticleView() {
         console.log("id", id);
         try {
             setLoading(true);
-            const response = axios.get(`https://nutricarebe-ffhmggb4gefgbwch.eastus-01.azurewebsites.net/article/get/${id}`)
+            const response = axios.get(`https://nutricare-backend.vercel.app/article/get/${id}`)
                 .then((res) => {
                     console.log(res.data);
                     setArticle(res.data);

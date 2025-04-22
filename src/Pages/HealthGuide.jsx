@@ -10,7 +10,7 @@ function HealthGuide() {
   async function getAll() {
     try {
       setLoading(true)
-      const response = await axios.get('https://nutricarebe-ffhmggb4gefgbwch.canadacentral-01.azurewebsites.net/article/get-all')
+      const response = await axios.get('https://nutricare-backend.vercel.app/article/get-all')
       setArticles(response.data)
     } catch (error) {
       setError(error)
