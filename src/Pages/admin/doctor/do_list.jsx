@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function DoctorTable({ doctorList, selectDoctor, deleteDoctor }) {
     return (
         <div className="flex flex-col">

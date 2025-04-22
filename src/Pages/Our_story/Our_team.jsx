@@ -1,4 +1,3 @@
-import React from 'react';
 import img_1 from '../../assets/our_team/Chamini Palliyaguru.jpg';
 import img_2 from '../../assets/our_team/Sadhika.jpg';
 import img_3 from '../../assets/our_team/Sajani.jpg';

@@ -1,7 +1,6 @@
 import RecipeTable from "./rc_list";
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { FaPlus } from "react-icons/fa";
 import RecipeForm from "./rc_form";
 
 export default function RecipeAdmin() {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function ArticleTable({ articleList, selectArticle, deleteArticle }) {
     return (
         <div className="flex flex-col">

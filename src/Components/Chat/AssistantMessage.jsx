@@ -1,4 +1,3 @@
-import React from "react";
 import MarkdownMessage from "../Util/MarkdownMessage";
 
 const AssistantMessage = ({ message }) => {

@@ -1,5 +1,5 @@
 import DoctorTable from "./do_list";
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import DoctorForm from "./do_form";
 

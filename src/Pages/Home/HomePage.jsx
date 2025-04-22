@@ -2,8 +2,7 @@ import img_1 from "../../assets/Home_img_1.png";
 import img_5 from "../../assets/ChatGPT.png";
 import img_6 from "../../assets/Food Bar.png";
 import img_7 from "../../assets/surgery-img.png";
-import React, { useEffect, useState } from 'react'
-import { Input, Button } from "@material-tailwind/react";
+import React, { useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import RecipeCard from "../../Components/Recipes/RecipeCard";
@@ -37,9 +36,7 @@ function HomePage() {
       <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-8 lg:pt-20 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
           <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0">
-             {/* <div className="flex flex-col lg:flex-row items-center justify-between mt-10 ml-10 mr-10">
-        <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
-          <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0 "> */}
+             
           <img 
               src={img_1}
               alt="Meal image"

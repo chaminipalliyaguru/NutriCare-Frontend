@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function RecipeTable({ recipeList, selectRecipe ,deleteRecipe }) {
     return (
         <div className="flex flex-col">

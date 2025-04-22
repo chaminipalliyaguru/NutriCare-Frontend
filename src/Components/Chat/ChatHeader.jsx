@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import SystemMessage from "./SystemMessage";
 import { AppContext } from "../../contexts/AppContext";
 
