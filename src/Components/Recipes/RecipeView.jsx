@@ -1,75 +1,56 @@
-import { useParams } from "react-router-dom"
-import axios from "axios"
-import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 export default function RecipeView() {
-    const params = useParams()
+  const params = useParams();
+  const [loading, setLoading] = useState(false);
+  const [recipe, setRecipe] = useState({});
 
-    const [loading, setLoading] = useState(false)
-    const [recipe, setRecipe] = useState({})
-
-    function getRecipe() {
-        const id = params.id;
-        console.log("id", id);
-        try {
-            setLoading(true)
-            const response = axios.get(`https://nutricare-backend.vercel.app/recipe/get/${id}`)
-                .then((res) => {
-                    console.log(res.data);
-                    setRecipe(res.data);
-                })
-            // setRecipe(response.data)
-        } catch (error) {
-            console.error(error)
-        } finally {
-            setLoading(false)
-        }
+  async function getRecipe() {
+    const id = params.id;
+    try {
+      setLoading(true);
+      const response = await axios.get(`https://nutricare-backend.vercel.app/recipe/get/${id}`);
+      setRecipe(response.data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
     }
+  }
 
-    useEffect(() => {
-        getRecipe()
-    }, [params.id])
+  useEffect(() => {
+    getRecipe();
+  }, [params.id]);
 
-    return (
-        <div>
+  return (
+    <div className="p-4 sm:p-6 md:p-10">
+      <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mt-8">{recipe.title}</h1>
 
-            <h1 className="font-bold text-6xl text-center mt-8">{recipe.title}</h1>
+      <div className="flex justify-center">
+        <img
+          className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 max-h-96 rounded-lg object-cover object-center mt-6"
+          src={recipe.imgSrc}
+          alt={recipe.title}
+        />
+      </div>
 
-            <img
-                className="w-full max-w-full sm:w-3/4 md:w-2/3 lg:w-5/6 max-h-96 rounded-lg object-cover object-center ml-4 sm:ml-8 md:ml-12 lg:ml-36 mt-4 sm:mt-8 md:mt-12"
-                src={recipe.imgSrc}
-                alt={recipe.title}
-            />
+      <div className="mt-10 mx-auto w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12">
+        <p className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Procedure:</p>
 
-
-            <div className="ml-36 mr-36">
-
-                <p className="mt-8 mb-8 text-3xl font-semibold">Procedure: </p>
-
-                <div className="flex justify-center items-center mt-2 mb-8">
-                    <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
-                        <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
-                            <div className="flex items-center w-full p-3 leading-tight text-center">
-                                Prep Time: {recipe.prepTime}
-                            </div>
-                            <div className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start">
-                                Condition: {recipe.condition}
-                            </div>
-                            <div className="flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start">
-                                Serves: {recipe.serves}
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-
-                <p>{recipe.recipeContent}</p>
-
-            </div>
-
-
-
+        <div className="flex justify-center items-center mb-8">
+          <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-full max-w-md rounded-xl p-4">
+            <nav className="flex flex-col gap-3 text-base font-medium text-blue-gray-700">
+              <div className="p-2">Prep Time: {recipe.prepTime}</div>
+              <div className="p-2">Condition: {recipe.condition}</div>
+              <div className="p-2">Serves: {recipe.serves}</div>
+            </nav>
+          </div>
         </div>
 
-
-    )
+        <p className="text-base sm:text-lg md:text-xl text-gray-800">{recipe.recipeContent}</p>
+      </div>
+    </div>
+  );
 }

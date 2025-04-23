@@ -1,34 +1,34 @@
-import img_1 from "../../assets/Home_img_1.png";
-import img_5 from "../../assets/ChatGPT.png";
-import img_6 from "../../assets/Food Bar.png";
-import img_7 from "../../assets/surgery-img.png";
-import React, { useState } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom';
-import RecipeCard from "../../Components/Recipes/RecipeCard";
+import img_1 from "../../public/Home_img_1.png";
+import chatgptIcon from "../../public/ChatGPT.png";
+import FoodBar from "../../public/Food Bar.png";
+import surgery from "../../public/surgery-img.png";
+import React, { useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import RecipeCard from "../Components/Recipes/RecipeCard";
 
-function HomePage() {
-  const [recipies, setRecipies] = React.useState([])
-  const [loading, setLoading] = React.useState(false)
-  const [error, setError] = React.useState(null)
-
-  const [condition, setName] = useState('')
+function Home() {
+  const [recipies, setRecipies] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
 
   async function getAll() {
     try {
-      setLoading(true)
-      const response = await axios.get('https://nutricare-backend.vercel.app/recipe/get-all?limit=3')
-      setRecipies(response.data)
+      setLoading(true);
+      const response = await axios.get(
+        "https://nutricare-backend.vercel.app/recipe/get-all?limit=3"
+      );
+      setRecipies(response.data);
     } catch (error) {
-      setError(error)
+      setError(error);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
 
   React.useEffect(() => {
-    getAll()
-  }, [])
+    getAll();
+  }, []);
 
   return (
     <div>
@@ -36,14 +36,12 @@ function HomePage() {
       <div className="flex flex-col lg:flex-row items-center justify-between h-auto pt-8 lg:pt-20 px-4 lg:px-40">
         <div className="relative flex bg-clip-border rounded-xl bg-amber-50 text-gray-700 shadow-md w-full lg:max-w-[74rem] flex-col lg:flex-row">
           <div className="relative w-full lg:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-t-lg lg:rounded-r-none lg:rounded-t-none bg-clip-border shrink-0">
-             
-          <img 
+            <img
               src={img_1}
               alt="Meal image"
               className="object-cover w-full h-full"
             />
           </div>
-
 
           <div className="p-6">
             <h6 className="block mb-4 font-sans text-base font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
@@ -58,7 +56,7 @@ function HomePage() {
               leverages AI to provide meal recommendations, health tips, and
               resources to help you manage your wellness effectively.
             </p>
-            <Link to ='/recipe_vault' className="inline-block">
+            <Link to="/recipe_vault" className="inline-block">
               <button
                 className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase transition-all rounded-lg hover:bg-gray-900/10 active:bg-gray-900/20"
                 type="button"
@@ -79,26 +77,31 @@ function HomePage() {
                   />
                 </svg>
               </button>
-              </Link>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* 2nd section of the page */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8 mb-24 px-4 sm:px-6 lg:px-8">
-        {!loading && recipies.map((recipe) => {
-          return <RecipeCard
-            key={recipe._id}
-            id={recipe._id}
-            title={recipe.title}
-            description={recipe.description}
-            prepTime={recipe.prepTime}
-            serves={recipe.serve}
-            imgSrc={recipe.imgSrc}
-            condition={recipe.condition}
-          />
-        })}
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center mt-8 mb-24 px-4 sm:px-6 lg:px-8 ">
+        {!loading &&
+          recipies.map((recipe) => (
+            <div
+              key={recipe._id}
+              className="transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
+            >
+              <RecipeCard
+                id={recipe._id}
+                title={recipe.title}
+                description={recipe.description}
+                prepTime={recipe.prepTime}
+                serves={recipe.serve}
+                imgSrc={recipe.imgSrc}
+                condition={recipe.condition}
+              />
+            </div>
+          ))}
       </div>
 
       {/* 3rd section of the page */}
@@ -106,8 +109,12 @@ function HomePage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 lg:px-0 bg-amber-50">
         <div className="py-8 flex justify-center">
           <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
-          <div className="flex justify-center pt-8">
-              <img src={img_5} alt="Health Providers" className="object-cover w-auto h-30" />
+            <div className="flex justify-center pt-8">
+              <img
+                src={chatgptIcon}
+                alt="Health Providers"
+                className="object-cover w-auto h-30"
+              />
             </div>
 
             <div className="p-6">
@@ -115,24 +122,9 @@ function HomePage() {
                 Instant Health Advice
               </h4>
               <p className="text-lg font-normal text-gray-700">
-                Ask questions about nutrition, dietary concerns, or health management, and receive immediate, expert responses to guide your wellness journey.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="py-8 flex justify-center">
-          <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
-          <div className="flex justify-center pt-8">
-              <img src={img_6} alt="Health Providers" className="object-cover w-auto h-30" />
-            </div>
-
-            <div className="p-6">
-              <h4 className="text-2xl font-semibold text-blue-gray-900 mb-3">
-                Personalized Recipes
-              </h4>
-              <p className="text-lg font-normal text-gray-700">
-                Discover a diverse array of recipes tailored to address specific health requirements, ensuring you find meals that fit your dietary needs and preferences perfectly.
+                Ask questions about nutrition, dietary concerns, or health
+                management, and receive immediate, expert responses to guide
+                your wellness journey.
               </p>
             </div>
           </div>
@@ -141,25 +133,51 @@ function HomePage() {
         <div className="py-8 flex justify-center">
           <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
             <div className="flex justify-center pt-8">
-              <img src={img_7} alt="Health Providers" className="object-cover w-auto h-30" />
+              <img
+                src={FoodBar}
+                alt="Health Providers"
+                className="object-cover w-auto h-30"
+              />
             </div>
 
+            <div className="p-6">
+              <h4 className="text-2xl font-semibold text-blue-gray-900 mb-3">
+                Personalized Recipes
+              </h4>
+              <p className="text-lg font-normal text-gray-700">
+                Discover a diverse array of recipes tailored to address specific
+                health requirements, ensuring you find meals that fit your
+                dietary needs and preferences perfectly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="py-8 flex justify-center">
+          <div className="rounded-lg overflow-hidden shadow-lg max-w-sm bg-white">
+            <div className="flex justify-center pt-8">
+              <img
+                src={surgery}
+                alt="Health Providers"
+                className="object-cover w-auto h-30"
+              />
+            </div>
 
             <div className="p-6">
               <h4 className="text-2xl font-semibold text-blue-gray-900 mb-3">
                 Health Providers
               </h4>
               <p className="text-lg font-normal text-gray-700">
-                Easily access a network of healthcare professionals, enabling seamless communication and support for your health concerns and queries.
+                Easily access a network of healthcare professionals, enabling
+                seamless communication and support for your health concerns and
+                queries.
               </p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-
   );
 }
 
-export default HomePage;
+export default Home;

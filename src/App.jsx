@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Recipe_vault from "./Pages/Recipe_vault";
-import HomePage from "./Pages/Home/HomePage";
+import Home from "./Pages/Home";
 import About_us from "./Pages/Our_story/About_us";
 import HealthGuide from "./Pages/HealthGuide";
 import Assistant from "./Pages/Assistant";
@@ -25,7 +25,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/recipe_vault" element={<Recipe_vault />} />
         <Route path="/about_us" element={<About_us />} />
         <Route path="/assistant" element={<Assistant />} />
