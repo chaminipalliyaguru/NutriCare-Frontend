@@ -61,7 +61,7 @@ function Assistant() {
   };
 
   return (
-    <div className="container px-4 sm:px-8 md:pl-16 lg:pl-28 pt-4 sm:pt-6">
+    <div className="container px-4 sm:px-8 md:pl-16 lg:pl-52 pt-4 sm:pt-6">
       <div className="chatbot-popup">
       
 
