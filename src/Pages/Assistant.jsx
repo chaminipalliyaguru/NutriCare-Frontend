@@ -21,7 +21,7 @@ function Assistant() {
       ]);
 
       // Send the user's input to the backend API
-      const response = await fetch("http://localhost:3003/chat", {
+      const response = await fetch("https://nutricare-backend.vercel.app/chat/get-all", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,10 +55,6 @@ function Assistant() {
     }
   };
 
-  // Toggle minimize/maximize
-  const toggleMinimize = () => {
-    setIsMinimized((prev) => !prev);
-  };
 
   return (
     <div className="container px-4 sm:px-8 md:pl-16 lg:pl-52 pt-4 sm:pt-6">
