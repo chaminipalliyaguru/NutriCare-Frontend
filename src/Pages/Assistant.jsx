@@ -21,7 +21,7 @@ function Assistant() {
       ]);
 
       // Send the user's input to the backend API
-      const response = await fetch("http://localhost:3000/chat", {
+      const response = await fetch("http://localhost:3003/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
