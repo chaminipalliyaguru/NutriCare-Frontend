@@ -3,12 +3,12 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Recipe_vault from "./Pages/Recipe_vault";
 import Home from "./Pages/Home";
-import About_us from "./Pages/Our_story/About_us";
+import About_us from "./Pages/About_us";
 import HealthGuide from "./Pages/HealthGuide";
 import Assistant from "./Pages/Assistant";
-import Our_team from "./Pages/Our_story/Our_team";
+import Our_team from "./Components/aboutUs/Our_team";
 import FindDoctor from "./Pages/FindDoctor";
-import RecipeAdmin from "./Pages/admin/recipe/rc_index";
+import RecipeAdmin from "./Components/admin/recipe/rc_index";
 import DoctorAdmin from "./Pages/admin/doctor/do_index";
 import ArticleAdmin from "./Pages/admin/article/ac_index";
 import RecipeView from "./Components/Recipes/RecipeView";
@@ -18,7 +18,7 @@ import ArticleView from "./Components/articles/articleView";
 import LoginPage from "./Pages/auth/login";
 import Register from "./Pages/auth/register";
 import Admin from "./Pages/admin";
-import CodeOfConduct from './Pages/Our_story/CodeOfConduct'
+import CodeOfConduct from './Components/aboutUs/CodeOfConduct'
 import ChatForm from "./Components/Assistant/ChatForm";
 
 function App() {

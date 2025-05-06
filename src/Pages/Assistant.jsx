@@ -55,11 +55,7 @@ function Assistant() {
     }
   };
 
-  // Toggle minimize/maximize
-  const toggleMinimize = () => {
-    setIsMinimized((prev) => !prev);
-  };
-
+ 
   return (
     <div className="container px-4 sm:px-8 md:pl-16 lg:pl-52 pt-4 sm:pt-6">
       <div className="chatbot-popup">
@@ -68,6 +64,7 @@ function Assistant() {
         {/* Chatbot body (conditionally rendered) */}
         {!isMinimized && (
           <div className="chat-body">
+
             {/* Initial bot message */}
             <div className="message bot-message">
               <ChatbotIcon />
